@@ -1,0 +1,22 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>AddressInput</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <form *ngIf="form" [formGroup]="form" novalidate>
+    <mv-address-input label="Address" formControlName="address"></mv-address-input>
+
+    {{form.value | mvCircularJson}}
+
+    <mv-errors-display target="address"></mv-errors-display>
+
+    <ion-item>
+      <button ion-button type="submit" [disabled]="!form.valid" (click)="onSubmit()">Submit</button>
+    </ion-item>
+  </form>
+</ion-content>

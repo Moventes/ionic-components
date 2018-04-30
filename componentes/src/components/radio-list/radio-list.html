@@ -1,0 +1,6 @@
+<ion-list radio-group [(ngModel)]="selected">
+    <ion-item *ngFor="let value of _currentValues; index as i">
+        <ion-label>{{ enum ? enumOfChoices[_currentValues[i]] : value | translate }}</ion-label>
+        <ion-radio value={{i}}></ion-radio>
+    </ion-item>
+</ion-list>

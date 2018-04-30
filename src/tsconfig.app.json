@@ -2,7 +2,9 @@
   "extends": "../tsconfig.json",
   "angularCompilerOptions": {
     "paths": {
-      "@my/lib": [ "../my-lib/src/public_api.ts" ]
+      "@moventes/componentes": [
+        "../componentes/src/public_api.ts"
+      ]
     }
   },
   "compilerOptions": {
@@ -11,7 +13,9 @@
     "baseUrl": "",
     "types": [],
     "paths": {
-      "@my/lib": [ "../my-lib/src/public_api.ts" ]
+      "@moventes/componentes": [
+        "../componentes/src/public_api.ts"
+      ]
     }
   },
   "exclude": [

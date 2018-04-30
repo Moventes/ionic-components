@@ -1,0 +1,73 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>
+            Radio List
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+    <ion-item>
+        <ion-label>TEMPLATE DRIVEN + OBSERVABLE</ion-label>
+    </ion-item>
+    <ion-item>
+        <ion-label>Choice number {{ observableSelected }} was selected, so the answer is {{ _results[observableSelected] }} </ion-label>
+    </ion-item>
+
+    <form #observableForm="ngForm">
+        <ion-item>
+            <mv-radio-list name="selected" [(ngModel)]="observableSelected" [values]="choices"></mv-radio-list>
+            <pre>{{ observableForm.value | json }}</pre>
+        </ion-item>
+    </form>
+
+    <ion-item>
+        <ion-label>TEMPLATE DRIVEN + ENUM</ion-label>
+    </ion-item>
+    <ion-item>
+        <ion-label>Choice {{ enumSelected }} was selected, so the answer is {{ enumOfChoices[enumSelected] }} </ion-label>
+    </ion-item>
+    <form #enumForm="ngForm">
+        <ion-item>
+            <mv-radio-list name="selected" [(ngModel)]="enumSelected" [values]="enumOfChoices" [enumName]="enumName"></mv-radio-list>
+            <pre>{{ enumForm.value | json }}</pre>
+        </ion-item>
+    </form>
+
+    <form [formGroup]="observableFormGroup">
+        <ion-item>
+            <ion-label>MODELDRIVEN + OBSERVABLE + ENUM.VALIDATOR</ion-label>
+        </ion-item>
+        <ion-item>
+            <mv-radio-list formControlName="selected" [values]="choices"></mv-radio-list>
+            <pre>{{ observableFormGroup.value | json }}</pre>
+        </ion-item>
+        <ion-label>errors should display here</ion-label>
+        <mv-errors-display target="selected"></mv-errors-display>
+        <ion-item>
+            <ion-label>
+                Choice number {{ observableFormGroup.value.selected }} was selected, so the answer is {{ _results[observableFormGroup.value.selected]
+                }}
+            </ion-label>
+        </ion-item>
+        <mv-errors-display></mv-errors-display>
+    </form>
+
+    <form [formGroup]="enumFormGroup">
+        <ion-item>
+            <ion-label>MODELDRIVEN + ENUM</ion-label>
+        </ion-item>
+        <ion-item>
+            <mv-radio-list formControlName="selected" [values]="enumOfChoices" [enumName]="enumName"></mv-radio-list>
+            <pre>{{ enumFormGroup.value | json }}</pre>
+        </ion-item>
+        <ion-item>
+            <ion-label>
+                Choice number {{ enumFormGroup.value.selected }} was selected, so the answer is {{ _results[enumFormGroup.value.selected]
+                }}
+            </ion-label>
+        </ion-item>
+    </form>
+
+</ion-content>

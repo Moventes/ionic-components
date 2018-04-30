@@ -1,0 +1,12 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Yes No List</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <form name="templateForm" class="full-height">
+    <mv-yes-no-list [(ngModel)]="answers" [question]="question" [itemsList]="itemsList" name="answers" [callback]="callback"></mv-yes-no-list>
+  </form>
+</ion-content>

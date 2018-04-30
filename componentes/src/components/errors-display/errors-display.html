@@ -1,0 +1,9 @@
+<ion-item *ngIf="errors.keys && errors.keys.length">
+  <h3 ion-text color="danger" *ngIf="!target">{{'There are errors' | translate}}</h3>
+  <div *ngFor="let labelKey of errors.keys">
+    <h4 ion-text color="danger" *ngIf="!target">{{ labelKey | translate }}</h4>
+    <div *ngFor="let errorKey of errors[labelKey].keys">
+      <p ion-text color="danger" *ngIf="errorKey != 'keys'">{{ 'error.'+ labelKey + '.' + errorKey | uppercase | translate }}</p>
+    </div>
+  </div>
+</ion-item>

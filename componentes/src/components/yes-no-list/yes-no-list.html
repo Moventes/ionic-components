@@ -1,0 +1,19 @@
+<div class="full-height flex-vertical justify-between">
+  <div class="progress-bar full-width">
+    <div [style.width]="progress" class="progress"></div>
+  </div>
+  <h1 ion-text color="primary" text-center text-wrap>{{ question | translate }}</h1>
+  <h2 text-center>{{ sortedItemsList[currentItem].title | translate }}</h2>
+  <div class="flex-horizontal height-15">
+    <div class="half-width">
+      <div ion-button full large color="danger" class="full-height" (click)="answerNo()">
+        <ion-icon name="thumbs-down" class="font-5"></ion-icon>
+      </div>
+    </div>
+    <div class="half-width">
+      <div ion-button full large color="secondary" class="full-height" (click)="answerYes()">
+        <ion-icon name="thumbs-up" class="font-5"></ion-icon>
+      </div>
+    </div>
+  </div>
+</div>

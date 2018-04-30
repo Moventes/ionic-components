@@ -1,0 +1,13 @@
+<ion-item>
+  <ion-searchbar type="text" id="search" [(ngModel)]="displayedAddressValue" (ionInput)="inputOnSearchbar()" (ionFocus)="inputOnSearchbar()"
+    (ionBlur)="onBlur()" [placeholder]="label"></ion-searchbar>
+</ion-item>
+<ion-item *ngIf="results.length > 0">
+  <ion-list>
+    <ion-item text-wrap *ngFor="let item of results" tappable (click)="selectSearchResult(item)">
+      {{ item.description || item.formatted_address }}
+    </ion-item>
+  </ion-list>
+</ion-item>
+<!-- some html element is needed by maps API to "display" attribution when no maps is generated -->
+<p id="attribution"></p>

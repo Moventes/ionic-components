@@ -10,8 +10,8 @@
       "node"
     ],
     "paths": {
-      "@my/lib": [
-        "../dist/my-lib"
+      "@moventes/componentes": [
+        "../dist/componentes"
       ]
     }
   },
@@ -20,7 +20,7 @@
     "polyfills.ts"
   ],
   "include": [
-    "../my-lib/**/*.ts"
+    "../componentes/**/*.ts"
   ],
   "exclude": [
     "node_modules",

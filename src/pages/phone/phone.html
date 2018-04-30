@@ -1,0 +1,25 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>PhoneInput</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <form *ngIf="form" [formGroup]="form" novalidate>
+    <ion-item>
+      <ion-label text-wrap>{{'Phone number' | translate}}</ion-label>
+      <mv-phone-input item-content formControlName="phone"></mv-phone-input>
+    </ion-item>
+    <mv-errors-display target="phone"></mv-errors-display>
+
+    <pre>
+      {{form.value | json}}
+    </pre>
+    <ion-item>
+      <button ion-button type="submit" [disabled]="!form.valid" (click)="onSubmit()">Submit</button>
+    </ion-item>
+  </form>
+</ion-content>

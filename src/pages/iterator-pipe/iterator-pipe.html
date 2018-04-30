@@ -1,0 +1,37 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>iterator-pipe</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <form [formGroup]="formGroup">
+    <ion-item>Model driven, list = enum, constructed with pipe</ion-item>
+    <ion-list radio-group formControlName="selectedInEnum">
+      <ion-item *ngFor="let element of enum | mvIterator">
+        <ion-label>{{ element.value }}</ion-label>
+        <ion-radio value="{{element.key}}"></ion-radio>
+      </ion-item>
+    </ion-list>
+    <ion-item>
+      <ion-label>
+        selectedInEnum = {{ formGroup.get('selectedInEnum').value | translate }}
+      </ion-label>
+    </ion-item>
+    <ion-item>Model driven, list = obs, constructed with pipe</ion-item>
+    <ion-list radio-group formControlName="selectedInObs">
+      <ion-item *ngFor="let element of observable | mvIterator">
+        <ion-label>{{ element }}</ion-label>
+        <ion-radio value="{{element}}"></ion-radio>
+      </ion-item>
+    </ion-list>
+    <ion-item>
+      <ion-label>
+        selectedInObs = {{ formGroup.get('selectedInObs').value | translate }}
+      </ion-label>
+    </ion-item>
+  </form>
+</ion-content>
