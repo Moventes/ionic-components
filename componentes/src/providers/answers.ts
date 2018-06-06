@@ -8,7 +8,7 @@ export class AnswersProvider {
   constructor() { }
 
   public get answers(): Object {
-    return this._answers
+    return this._answers;
   }
 
   public set answers(answers: Object) {

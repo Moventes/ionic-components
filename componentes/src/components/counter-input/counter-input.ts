@@ -3,7 +3,7 @@ import { ControlValueAccessor, NG_VALUE_ACCESSOR, NG_VALIDATORS, FormControl } f
 
 export function createCounterRangeValidator(maxValue, minValue) {
   return function validateCounterRange(c: FormControl) {
-    let err = {
+    const err = {
       rangeError: {
         given: c.value,
         max: maxValue,
@@ -12,7 +12,7 @@ export function createCounterRangeValidator(maxValue, minValue) {
     };
 
     return (c.value > +maxValue || c.value < +minValue) ? err : null;
-  }
+  };
 }
 
 @Component({

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { ControlContainer } from '@angular/forms';
 
 /**
@@ -9,14 +9,14 @@ import { ControlContainer } from '@angular/forms';
  */
 @Component({
   selector: 'mv-errors-display',
-  templateUrl: 'errors-display.html',
-  inputs: ['target']
+  templateUrl: 'errors-display.html'
 })
 export class ErrorsDisplayComponent {
 
   /**
    * If set, specific target whose errors will be displayed
    */
+  @Input()
   private target: string;
 
   /**
@@ -42,7 +42,7 @@ export class ErrorsDisplayComponent {
    * @returns errors Object containing the errors retrieved
    */
   get errors() {
-    let errors: any = {};
+    const errors: any = {};
 
     if (this.target) {
       if (this.group.control.get(this.target) && this.group.control.get(this.target).dirty && this.group.control.get(this.target).errors) {
@@ -50,7 +50,7 @@ export class ErrorsDisplayComponent {
         errors[this.target].keys = Object.keys(this.group.control.get(this.target).errors);
       }
     } else {
-      for (let control in this.group.form.controls) {
+      for (const control in this.group.form.controls) {
         if (this.group.form.controls[control].dirty && this.group.form.controls[control].errors) {
           errors[control] = this.group.control.get(control).errors;
           errors[control].keys = Object.keys(this.group.control.get(control).errors);

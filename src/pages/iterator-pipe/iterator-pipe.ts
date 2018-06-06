@@ -2,20 +2,20 @@ import { FormGroup, FormBuilder, FormControl, Validators } from '@angular/forms'
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { EnumValidator } from '../../validators/enum.validator';
-import { Observable } from 'rxjs/Observable';
+import { Observable } from 'rxjs-compat';
 
 enum AnimalsEnum {
   DOG = 'ANIMAL.DOG',
   CAT = 'ANIMAL.CAT',
   BIRD = 'ANIMAL.BIRD'
-};
+}
 
 @Component({
   selector: 'page-iterator-pipe',
   templateUrl: 'iterator-pipe.html',
 })
 export class IteratorPipePage {
-  formGroup: FormGroup
+  formGroup: FormGroup;
   enum = AnimalsEnum;
   observable = Observable.of(['DOG', 'CAT', 'BIRD']);
 
@@ -23,7 +23,7 @@ export class IteratorPipePage {
     this.formGroup = this.fb.group({
       selectedInEnum: new FormControl(null, [Validators.required, EnumValidator.isElementOf(this.enum)]),
       selectedInObs: new FormControl(null, [Validators.required])
-    })
+    });
   }
 
 }

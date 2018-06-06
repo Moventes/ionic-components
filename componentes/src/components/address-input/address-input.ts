@@ -1,5 +1,6 @@
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
-import { Component, forwardRef, NgZone } from '@angular/core';
+import { Component, forwardRef, NgZone, Input } from '@angular/core';
+import { AddressDetails, Address } from 'mv-common-components';
 
 /**
  * Google declaration provides access to Google maps api
@@ -21,8 +22,7 @@ declare var google: any;
       useExisting: forwardRef(() => AddressInputComponent),
       multi: true
     }
-  ],
-  inputs: ['label']
+  ]
 })
 export class AddressInputComponent implements ControlValueAccessor {
   // TODO: configure API key : this one is Gwenaël HENOT's for lea-firestore : AIzaSyA9Pk3eEXTAFA04nbUjcdAlkcoyXMoSzFM
@@ -30,17 +30,18 @@ export class AddressInputComponent implements ControlValueAccessor {
   /**
    * The component needs a label option to fill the placeholder
    */
+  @Input()
   label: string;
 
   /**
    * The component needs a model (ngModel od formControlName) option that will store the returned address
    */
-  private _addressValue: any = {};
+  private _addressValue: Address = { formattedAddress: '' };
 
   /**
    * {string} Address formatted as it will appear in the dom
    */
-  private _displayedAddressValue: string = '';
+  private _displayedAddressValue = '';
 
   /**
    * True if the input address will be used as is
@@ -67,11 +68,11 @@ export class AddressInputComponent implements ControlValueAccessor {
    */
   private results = [];
 
-  private get addressValue() {
+  private get addressValue(): Address {
     return this._addressValue;
   }
 
-  private set addressValue(val) {
+  private set addressValue(val: Address) {
     this.ngZone.run(() => {
       this._addressValue = val;
       this.propagateChange(this._addressValue);
@@ -108,7 +109,7 @@ export class AddressInputComponent implements ControlValueAccessor {
    */
   private useAutocompleteservice() {
     this.useInputAddress = false;
-    if (this.displayedAddressValue == '') {
+    if (this.displayedAddressValue === '') {
       this.setList();
       return;
     }
@@ -116,9 +117,8 @@ export class AddressInputComponent implements ControlValueAccessor {
       (results, status) => {
         if (results && results.length > 0) {
           this.setList(results);
-        }
-        else {
-          this.useGeocoding()
+        } else {
+          this.useGeocoding();
         }
       });
   }
@@ -129,9 +129,9 @@ export class AddressInputComponent implements ControlValueAccessor {
    */
   private useGeocoding() {
     this.useInputAddress = true;
-    let request = {
+    const request = {
       address: this.displayedAddressValue
-    }
+    };
     if (!this.geocoder) {
       this.geocoder = new google.maps.Geocoder();
     }
@@ -168,17 +168,22 @@ export class AddressInputComponent implements ControlValueAccessor {
    * @param item Selected item from propositon list
    */
   public selectSearchResult(item) {
-    let request = {
+    const request = {
       placeId: item.place_id
     };
     if (!this.placeService) {
       this.placeService = new google.maps.places.PlacesService(document.getElementById('attribution'));
     }
     this.placeService.getDetails(request, (place, status) => {
-      if (status == google.maps.places.PlacesServiceStatus.OK) {
+      if (status === google.maps.places.PlacesServiceStatus.OK) {
         this.displayedAddressValue = place.formatted_address;
-        let addressDetails: { [key: string]: any } = {};
-        for (let component of place.address_components) {
+        const addressDetails: AddressDetails = {
+          route: '',
+          postalCode: '',
+          city: '',
+          country: ''
+        };
+        for (const component of place.address_components) {
           if (component.types[0] === 'street_number') {
             addressDetails.streetNumber = component.long_name;
           }
@@ -248,6 +253,6 @@ export class AddressInputComponent implements ControlValueAccessor {
   /**
    * Container for the propagation function.
    */
-  public propagateChange = (_: any) => { }
+  public propagateChange = (_: any) => { };
 }
 

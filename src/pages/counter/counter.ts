@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { FormGroup, FormBuilder } from '@angular/forms';
 import { createCounterRangeValidator } from '../../../componentes/src/components/counter-input/counter-input';
@@ -14,7 +14,7 @@ import { createCounterRangeValidator } from '../../../componentes/src/components
   selector: 'page-counter',
   templateUrl: 'counter.html',
 })
-export class CounterPage {
+export class CounterPage implements OnInit {
 
   outerCounterValue = 5;
   formGroup: FormGroup;
