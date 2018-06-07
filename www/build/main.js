@@ -1,6 +1,6 @@
 webpackJsonp([0],{
 
-/***/ 162:
+/***/ 163:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -70,7 +70,7 @@ var HomePage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 163:
+/***/ 164:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -110,7 +110,7 @@ var AnswersProvider = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 167:
+/***/ 168:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -312,7 +312,7 @@ var AutocompleteModalComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 168:
+/***/ 169:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -608,7 +608,7 @@ var AddressAutocompleteModalComponent = /** @class */ (function () {
     ], AddressAutocompleteModalComponent.prototype, "searchBar", void 0);
     AddressAutocompleteModalComponent = AddressAutocompleteModalComponent_1 = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'mv-address-autocomplete-modal',template:/*ion-inline-start:"/media/data/Projects/componentes/ionic-components-v2/componentes/src/components/address-autocomplete/address-autocomplete-modal.html"*/'<ion-header>\n  <ion-toolbar>\n    <ion-buttons start>\n      <button ion-button clear color="dark" icon-only (click)="closeModal()">\n        <ion-icon name="close"></ion-icon>\n      </button>\n    </ion-buttons>\n    <ion-title>{{ label }}</ion-title>\n  </ion-toolbar>\n</ion-header>\n<ion-content>\n  <ion-item>\n    <ion-searchbar #search type="text" id="search" [(ngModel)]="displayedAddressValue" (ionInput)="inputOnSearchbar(true)" (ionFocus)="inputOnSearchbar(false)"\n      (ionBlur)="onBlur()" [placeholder]="label"></ion-searchbar>\n  </ion-item>\n  <ion-item *ngIf="results.length > 0">\n    <ion-list>\n      <ion-item text-wrap *ngFor="let item of results" tappable (click)="selectSearchResult(item)">\n        {{ item.description || item.formatted_address }}\n      </ion-item>\n      <ion-item (click)="selectCustomAddress()" *ngIf="allowCustom && customEnabled">\n        <p style="color: #606060; font-style: oblique">{{ displayedAddressValue }}</p>\n      </ion-item>\n    </ion-list>\n  </ion-item>\n  <!-- some html element is needed by maps API to "display" attribution when no maps is generated -->\n  <p id="attribution"></p>\n</ion-content>'/*ion-inline-end:"/media/data/Projects/componentes/ionic-components-v2/componentes/src/components/address-autocomplete/address-autocomplete-modal.html"*/,
+            selector: 'mv-address-autocomplete-modal',template:/*ion-inline-start:"/media/data/Projects/componentes/ionic-components-v2/componentes/src/components/address-autocomplete/address-autocomplete-modal.html"*/'<ion-header>\n  <ion-toolbar>\n    <ion-buttons start>\n      <button ion-button clear color="dark" icon-only (click)="closeModal()">\n        <ion-icon name="close"></ion-icon>\n      </button>\n    </ion-buttons>\n    <ion-title>{{ label }}</ion-title>\n  </ion-toolbar>\n</ion-header>\n<ion-content>\n  <ion-item>\n    <ion-searchbar #search type="text" id="search" [(ngModel)]="displayedAddressValue" (ionInput)="inputOnSearchbar(true)" (ionFocus)="inputOnSearchbar(false)"\n      (ionBlur)="onBlur()" [placeholder]="label"></ion-searchbar>\n  </ion-item>\n  <ion-item *ngIf="results.length > 0 || (allowCustom && displayedAddressValue)">\n    <ion-list>\n      <ion-item text-wrap *ngFor="let item of results" tappable (click)="selectSearchResult(item)">\n        {{ item.description || item.formatted_address }}\n      </ion-item>\n      <ion-item (click)="selectCustomAddress()" *ngIf="allowCustom && customEnabled">\n        <p style="color: #606060; font-style: oblique">{{ displayedAddressValue }}</p>\n      </ion-item>\n    </ion-list>\n  </ion-item>\n  <!-- some html element is needed by maps API to "display" attribution when no maps is generated -->\n  <p id="attribution"></p>\n</ion-content>'/*ion-inline-end:"/media/data/Projects/componentes/ionic-components-v2/componentes/src/components/address-autocomplete/address-autocomplete-modal.html"*/,
             providers: [
                 {
                     provide: __WEBPACK_IMPORTED_MODULE_1__angular_forms__["f" /* NG_VALUE_ACCESSOR */],
@@ -629,7 +629,7 @@ var AddressAutocompleteModalComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 169:
+/***/ 170:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -741,7 +741,7 @@ var PromptProvider = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 201:
+/***/ 202:
 /***/ (function(module, exports) {
 
 function webpackEmptyAsyncContext(req) {
@@ -754,11 +754,11 @@ function webpackEmptyAsyncContext(req) {
 webpackEmptyAsyncContext.keys = function() { return []; };
 webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
 module.exports = webpackEmptyAsyncContext;
-webpackEmptyAsyncContext.id = 201;
+webpackEmptyAsyncContext.id = 202;
 
 /***/ }),
 
-/***/ 244:
+/***/ 245:
 /***/ (function(module, exports) {
 
 function webpackEmptyAsyncContext(req) {
@@ -771,11 +771,11 @@ function webpackEmptyAsyncContext(req) {
 webpackEmptyAsyncContext.keys = function() { return []; };
 webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
 module.exports = webpackEmptyAsyncContext;
-webpackEmptyAsyncContext.id = 244;
+webpackEmptyAsyncContext.id = 245;
 
 /***/ }),
 
-/***/ 289:
+/***/ 290:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -796,7 +796,7 @@ webpackEmptyAsyncContext.id = 244;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_moment__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_moment___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_moment__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__angular_platform_browser__ = __webpack_require__(46);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_google_libphonenumber__ = __webpack_require__(413);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_google_libphonenumber__ = __webpack_require__(162);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_google_libphonenumber___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8_google_libphonenumber__);
 
 
@@ -1323,8 +1323,8 @@ var CounterInputComponent = /** @class */ (function () {
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PhonePage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(20);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_forms__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(20);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1349,8 +1349,22 @@ var PhonePage = /** @class */ (function () {
         this.navParams = navParams;
         this.fb = fb;
         this.phone = '0613256545';
+        this.countryList = [
+            {
+                id: 'FR',
+                label: 'France'
+            },
+            {
+                id: 'US',
+                label: 'U.S.A.'
+            },
+            {
+                id: 'GB',
+                label: 'United Kingdom'
+            }
+        ];
         this.form = this.fb.group({
-            'phone': new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["c" /* FormControl */](this.phone, [__WEBPACK_IMPORTED_MODULE_2__angular_forms__["i" /* Validators */].minLength(2), __WEBPACK_IMPORTED_MODULE_2__angular_forms__["i" /* Validators */].required])
+            'phone': new __WEBPACK_IMPORTED_MODULE_1__angular_forms__["c" /* FormControl */](this.phone, [__WEBPACK_IMPORTED_MODULE_1__angular_forms__["i" /* Validators */].minLength(2), __WEBPACK_IMPORTED_MODULE_1__angular_forms__["i" /* Validators */].required])
         });
     }
     PhonePage.prototype.onSubmit = function () {
@@ -1358,9 +1372,9 @@ var PhonePage = /** @class */ (function () {
     };
     PhonePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-phone',template:/*ion-inline-start:"/media/data/Projects/componentes/ionic-components-v2/src/pages/phone/phone.html"*/'<ion-header>\n\n  <ion-navbar>\n    <ion-title>PhoneInput</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <form *ngIf="form" [formGroup]="form" novalidate>\n    <ion-item>\n      <ion-label text-wrap>{{\'Phone number\' | translate}}</ion-label>\n      <mv-phone-input item-content formControlName="phone"></mv-phone-input>\n    </ion-item>\n    <mv-errors-display target="phone"></mv-errors-display>\n\n    <pre>\n      {{form.value | json}}\n    </pre>\n    <ion-item>\n      <button ion-button type="submit" [disabled]="!form.valid" (click)="onSubmit()">Submit</button>\n    </ion-item>\n  </form>\n</ion-content>\n'/*ion-inline-end:"/media/data/Projects/componentes/ionic-components-v2/src/pages/phone/phone.html"*/,
+            selector: 'page-phone',template:/*ion-inline-start:"/media/data/Projects/componentes/ionic-components-v2/src/pages/phone/phone.html"*/'<ion-header>\n\n  <ion-navbar>\n    <ion-title>PhoneInput</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <ion-title>Phone input with code</ion-title>\n  <ion-item>\n    <mv-phone-input-with-code label="Phone" phoneLabel="Phone" [countryList]="countryList" countryLabel="Country" [(ngModel)]="intlPhone"></mv-phone-input-with-code>\n  </ion-item>\n  <ion-item>\n    <pre>\n          {{ intlPhone | json }}\n        </pre>\n  </ion-item>\n  <ion-title>Phone input standard</ion-title>\n  <form *ngIf="form" [formGroup]="form" novalidate>\n    <ion-item>\n      <ion-label text-wrap>{{\'Phone number\' | translate}}</ion-label>\n      <mv-phone-input item-content formControlName="phone"></mv-phone-input>\n    </ion-item>\n    <mv-errors-display target="phone"></mv-errors-display>\n\n    <pre>\n      {{form.value | json}}\n    </pre>\n    <ion-item>\n      <button ion-button type="submit" [disabled]="!form.valid" (click)="onSubmit()">Submit</button>\n    </ion-item>\n  </form>\n</ion-content>'/*ion-inline-end:"/media/data/Projects/componentes/ionic-components-v2/src/pages/phone/phone.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__angular_forms__["b" /* FormBuilder */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["g" /* NavParams */], __WEBPACK_IMPORTED_MODULE_1__angular_forms__["b" /* FormBuilder */]])
     ], PhonePage);
     return PhonePage;
 }());
@@ -1473,8 +1487,8 @@ var EnumValidator = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(20);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(14);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__home_home__ = __webpack_require__(162);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__componentes_src_providers_answers__ = __webpack_require__(163);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__home_home__ = __webpack_require__(163);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__componentes_src_providers_answers__ = __webpack_require__(164);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1694,7 +1708,7 @@ var AutocompletePage = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_forms__ = __webpack_require__(14);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(20);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__autocomplete_modal__ = __webpack_require__(167);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__autocomplete_modal__ = __webpack_require__(168);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1739,7 +1753,6 @@ var AutocompleteComponent = /** @class */ (function () {
      */
     AutocompleteComponent.prototype.openModal = function () {
         var _this = this;
-        console.log(this.allowCustom);
         var autocompleteModal = this.modalCtrl.create(__WEBPACK_IMPORTED_MODULE_3__autocomplete_modal__["a" /* AutocompleteModalComponent */], {
             label: this.label,
             list: this.list,
@@ -1843,9 +1856,9 @@ var AutocompleteComponent = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(20);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__(57);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_first__ = __webpack_require__(838);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_first__ = __webpack_require__(839);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_first___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_first__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__prompt__ = __webpack_require__(169);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__prompt__ = __webpack_require__(170);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1987,13 +2000,13 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_common_http__ = __webpack_require__(533);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_angular__ = __webpack_require__(20);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_splash_screen__ = __webpack_require__(284);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ionic_native_status_bar__ = __webpack_require__(288);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_splash_screen__ = __webpack_require__(285);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ionic_native_status_bar__ = __webpack_require__(289);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__ngx_translate_core__ = __webpack_require__(57);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__ngx_translate_http_loader__ = __webpack_require__(591);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_mv_common_components__ = __webpack_require__(289);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_mv_common_components__ = __webpack_require__(290);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__app_component__ = __webpack_require__(596);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_home_home__ = __webpack_require__(162);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_home_home__ = __webpack_require__(163);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_address_address__ = __webpack_require__(414);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_counter_counter__ = __webpack_require__(415);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__pages_phone_phone__ = __webpack_require__(417);
@@ -2002,7 +2015,7 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__pages_yes_no_list_yes_no_list__ = __webpack_require__(420);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__componentes_src_componentes_module__ = __webpack_require__(829);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__pages_autocomplete_autocomplete__ = __webpack_require__(429);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__componentes_src_components_autocomplete_autocomplete_modal__ = __webpack_require__(167);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__componentes_src_components_autocomplete_autocomplete_modal__ = __webpack_require__(168);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2121,252 +2134,252 @@ var AppModule = /** @class */ (function () {
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
-	"./af": 290,
-	"./af.js": 290,
-	"./ar": 291,
-	"./ar-dz": 292,
-	"./ar-dz.js": 292,
-	"./ar-kw": 293,
-	"./ar-kw.js": 293,
-	"./ar-ly": 294,
-	"./ar-ly.js": 294,
-	"./ar-ma": 295,
-	"./ar-ma.js": 295,
-	"./ar-sa": 296,
-	"./ar-sa.js": 296,
-	"./ar-tn": 297,
-	"./ar-tn.js": 297,
-	"./ar.js": 291,
-	"./az": 298,
-	"./az.js": 298,
-	"./be": 299,
-	"./be.js": 299,
-	"./bg": 300,
-	"./bg.js": 300,
-	"./bm": 301,
-	"./bm.js": 301,
-	"./bn": 302,
-	"./bn.js": 302,
-	"./bo": 303,
-	"./bo.js": 303,
-	"./br": 304,
-	"./br.js": 304,
-	"./bs": 305,
-	"./bs.js": 305,
-	"./ca": 306,
-	"./ca.js": 306,
-	"./cs": 307,
-	"./cs.js": 307,
-	"./cv": 308,
-	"./cv.js": 308,
-	"./cy": 309,
-	"./cy.js": 309,
-	"./da": 310,
-	"./da.js": 310,
-	"./de": 311,
-	"./de-at": 312,
-	"./de-at.js": 312,
-	"./de-ch": 313,
-	"./de-ch.js": 313,
-	"./de.js": 311,
-	"./dv": 314,
-	"./dv.js": 314,
-	"./el": 315,
-	"./el.js": 315,
-	"./en-au": 316,
-	"./en-au.js": 316,
-	"./en-ca": 317,
-	"./en-ca.js": 317,
-	"./en-gb": 318,
-	"./en-gb.js": 318,
-	"./en-ie": 319,
-	"./en-ie.js": 319,
-	"./en-il": 320,
-	"./en-il.js": 320,
-	"./en-nz": 321,
-	"./en-nz.js": 321,
-	"./eo": 322,
-	"./eo.js": 322,
-	"./es": 323,
-	"./es-do": 324,
-	"./es-do.js": 324,
-	"./es-us": 325,
-	"./es-us.js": 325,
-	"./es.js": 323,
-	"./et": 326,
-	"./et.js": 326,
-	"./eu": 327,
-	"./eu.js": 327,
-	"./fa": 328,
-	"./fa.js": 328,
-	"./fi": 329,
-	"./fi.js": 329,
-	"./fo": 330,
-	"./fo.js": 330,
-	"./fr": 331,
-	"./fr-ca": 332,
-	"./fr-ca.js": 332,
-	"./fr-ch": 333,
-	"./fr-ch.js": 333,
-	"./fr.js": 331,
-	"./fy": 334,
-	"./fy.js": 334,
-	"./gd": 335,
-	"./gd.js": 335,
-	"./gl": 336,
-	"./gl.js": 336,
-	"./gom-latn": 337,
-	"./gom-latn.js": 337,
-	"./gu": 338,
-	"./gu.js": 338,
-	"./he": 339,
-	"./he.js": 339,
-	"./hi": 340,
-	"./hi.js": 340,
-	"./hr": 341,
-	"./hr.js": 341,
-	"./hu": 342,
-	"./hu.js": 342,
-	"./hy-am": 343,
-	"./hy-am.js": 343,
-	"./id": 344,
-	"./id.js": 344,
-	"./is": 345,
-	"./is.js": 345,
-	"./it": 346,
-	"./it.js": 346,
-	"./ja": 347,
-	"./ja.js": 347,
-	"./jv": 348,
-	"./jv.js": 348,
-	"./ka": 349,
-	"./ka.js": 349,
-	"./kk": 350,
-	"./kk.js": 350,
-	"./km": 351,
-	"./km.js": 351,
-	"./kn": 352,
-	"./kn.js": 352,
-	"./ko": 353,
-	"./ko.js": 353,
-	"./ky": 354,
-	"./ky.js": 354,
-	"./lb": 355,
-	"./lb.js": 355,
-	"./lo": 356,
-	"./lo.js": 356,
-	"./lt": 357,
-	"./lt.js": 357,
-	"./lv": 358,
-	"./lv.js": 358,
-	"./me": 359,
-	"./me.js": 359,
-	"./mi": 360,
-	"./mi.js": 360,
-	"./mk": 361,
-	"./mk.js": 361,
-	"./ml": 362,
-	"./ml.js": 362,
-	"./mn": 363,
-	"./mn.js": 363,
-	"./mr": 364,
-	"./mr.js": 364,
-	"./ms": 365,
-	"./ms-my": 366,
-	"./ms-my.js": 366,
-	"./ms.js": 365,
-	"./mt": 367,
-	"./mt.js": 367,
-	"./my": 368,
-	"./my.js": 368,
-	"./nb": 369,
-	"./nb.js": 369,
-	"./ne": 370,
-	"./ne.js": 370,
-	"./nl": 371,
-	"./nl-be": 372,
-	"./nl-be.js": 372,
-	"./nl.js": 371,
-	"./nn": 373,
-	"./nn.js": 373,
-	"./pa-in": 374,
-	"./pa-in.js": 374,
-	"./pl": 375,
-	"./pl.js": 375,
-	"./pt": 376,
-	"./pt-br": 377,
-	"./pt-br.js": 377,
-	"./pt.js": 376,
-	"./ro": 378,
-	"./ro.js": 378,
-	"./ru": 379,
-	"./ru.js": 379,
-	"./sd": 380,
-	"./sd.js": 380,
-	"./se": 381,
-	"./se.js": 381,
-	"./si": 382,
-	"./si.js": 382,
-	"./sk": 383,
-	"./sk.js": 383,
-	"./sl": 384,
-	"./sl.js": 384,
-	"./sq": 385,
-	"./sq.js": 385,
-	"./sr": 386,
-	"./sr-cyrl": 387,
-	"./sr-cyrl.js": 387,
-	"./sr.js": 386,
-	"./ss": 388,
-	"./ss.js": 388,
-	"./sv": 389,
-	"./sv.js": 389,
-	"./sw": 390,
-	"./sw.js": 390,
-	"./ta": 391,
-	"./ta.js": 391,
-	"./te": 392,
-	"./te.js": 392,
-	"./tet": 393,
-	"./tet.js": 393,
-	"./tg": 394,
-	"./tg.js": 394,
-	"./th": 395,
-	"./th.js": 395,
-	"./tl-ph": 396,
-	"./tl-ph.js": 396,
-	"./tlh": 397,
-	"./tlh.js": 397,
-	"./tr": 398,
-	"./tr.js": 398,
-	"./tzl": 399,
-	"./tzl.js": 399,
-	"./tzm": 400,
-	"./tzm-latn": 401,
-	"./tzm-latn.js": 401,
-	"./tzm.js": 400,
-	"./ug-cn": 402,
-	"./ug-cn.js": 402,
-	"./uk": 403,
-	"./uk.js": 403,
-	"./ur": 404,
-	"./ur.js": 404,
-	"./uz": 405,
-	"./uz-latn": 406,
-	"./uz-latn.js": 406,
-	"./uz.js": 405,
-	"./vi": 407,
-	"./vi.js": 407,
-	"./x-pseudo": 408,
-	"./x-pseudo.js": 408,
-	"./yo": 409,
-	"./yo.js": 409,
-	"./zh-cn": 410,
-	"./zh-cn.js": 410,
-	"./zh-hk": 411,
-	"./zh-hk.js": 411,
-	"./zh-tw": 412,
-	"./zh-tw.js": 412
+	"./af": 291,
+	"./af.js": 291,
+	"./ar": 292,
+	"./ar-dz": 293,
+	"./ar-dz.js": 293,
+	"./ar-kw": 294,
+	"./ar-kw.js": 294,
+	"./ar-ly": 295,
+	"./ar-ly.js": 295,
+	"./ar-ma": 296,
+	"./ar-ma.js": 296,
+	"./ar-sa": 297,
+	"./ar-sa.js": 297,
+	"./ar-tn": 298,
+	"./ar-tn.js": 298,
+	"./ar.js": 292,
+	"./az": 299,
+	"./az.js": 299,
+	"./be": 300,
+	"./be.js": 300,
+	"./bg": 301,
+	"./bg.js": 301,
+	"./bm": 302,
+	"./bm.js": 302,
+	"./bn": 303,
+	"./bn.js": 303,
+	"./bo": 304,
+	"./bo.js": 304,
+	"./br": 305,
+	"./br.js": 305,
+	"./bs": 306,
+	"./bs.js": 306,
+	"./ca": 307,
+	"./ca.js": 307,
+	"./cs": 308,
+	"./cs.js": 308,
+	"./cv": 309,
+	"./cv.js": 309,
+	"./cy": 310,
+	"./cy.js": 310,
+	"./da": 311,
+	"./da.js": 311,
+	"./de": 312,
+	"./de-at": 313,
+	"./de-at.js": 313,
+	"./de-ch": 314,
+	"./de-ch.js": 314,
+	"./de.js": 312,
+	"./dv": 315,
+	"./dv.js": 315,
+	"./el": 316,
+	"./el.js": 316,
+	"./en-au": 317,
+	"./en-au.js": 317,
+	"./en-ca": 318,
+	"./en-ca.js": 318,
+	"./en-gb": 319,
+	"./en-gb.js": 319,
+	"./en-ie": 320,
+	"./en-ie.js": 320,
+	"./en-il": 321,
+	"./en-il.js": 321,
+	"./en-nz": 322,
+	"./en-nz.js": 322,
+	"./eo": 323,
+	"./eo.js": 323,
+	"./es": 324,
+	"./es-do": 325,
+	"./es-do.js": 325,
+	"./es-us": 326,
+	"./es-us.js": 326,
+	"./es.js": 324,
+	"./et": 327,
+	"./et.js": 327,
+	"./eu": 328,
+	"./eu.js": 328,
+	"./fa": 329,
+	"./fa.js": 329,
+	"./fi": 330,
+	"./fi.js": 330,
+	"./fo": 331,
+	"./fo.js": 331,
+	"./fr": 332,
+	"./fr-ca": 333,
+	"./fr-ca.js": 333,
+	"./fr-ch": 334,
+	"./fr-ch.js": 334,
+	"./fr.js": 332,
+	"./fy": 335,
+	"./fy.js": 335,
+	"./gd": 336,
+	"./gd.js": 336,
+	"./gl": 337,
+	"./gl.js": 337,
+	"./gom-latn": 338,
+	"./gom-latn.js": 338,
+	"./gu": 339,
+	"./gu.js": 339,
+	"./he": 340,
+	"./he.js": 340,
+	"./hi": 341,
+	"./hi.js": 341,
+	"./hr": 342,
+	"./hr.js": 342,
+	"./hu": 343,
+	"./hu.js": 343,
+	"./hy-am": 344,
+	"./hy-am.js": 344,
+	"./id": 345,
+	"./id.js": 345,
+	"./is": 346,
+	"./is.js": 346,
+	"./it": 347,
+	"./it.js": 347,
+	"./ja": 348,
+	"./ja.js": 348,
+	"./jv": 349,
+	"./jv.js": 349,
+	"./ka": 350,
+	"./ka.js": 350,
+	"./kk": 351,
+	"./kk.js": 351,
+	"./km": 352,
+	"./km.js": 352,
+	"./kn": 353,
+	"./kn.js": 353,
+	"./ko": 354,
+	"./ko.js": 354,
+	"./ky": 355,
+	"./ky.js": 355,
+	"./lb": 356,
+	"./lb.js": 356,
+	"./lo": 357,
+	"./lo.js": 357,
+	"./lt": 358,
+	"./lt.js": 358,
+	"./lv": 359,
+	"./lv.js": 359,
+	"./me": 360,
+	"./me.js": 360,
+	"./mi": 361,
+	"./mi.js": 361,
+	"./mk": 362,
+	"./mk.js": 362,
+	"./ml": 363,
+	"./ml.js": 363,
+	"./mn": 364,
+	"./mn.js": 364,
+	"./mr": 365,
+	"./mr.js": 365,
+	"./ms": 366,
+	"./ms-my": 367,
+	"./ms-my.js": 367,
+	"./ms.js": 366,
+	"./mt": 368,
+	"./mt.js": 368,
+	"./my": 369,
+	"./my.js": 369,
+	"./nb": 370,
+	"./nb.js": 370,
+	"./ne": 371,
+	"./ne.js": 371,
+	"./nl": 372,
+	"./nl-be": 373,
+	"./nl-be.js": 373,
+	"./nl.js": 372,
+	"./nn": 374,
+	"./nn.js": 374,
+	"./pa-in": 375,
+	"./pa-in.js": 375,
+	"./pl": 376,
+	"./pl.js": 376,
+	"./pt": 377,
+	"./pt-br": 378,
+	"./pt-br.js": 378,
+	"./pt.js": 377,
+	"./ro": 379,
+	"./ro.js": 379,
+	"./ru": 380,
+	"./ru.js": 380,
+	"./sd": 381,
+	"./sd.js": 381,
+	"./se": 382,
+	"./se.js": 382,
+	"./si": 383,
+	"./si.js": 383,
+	"./sk": 384,
+	"./sk.js": 384,
+	"./sl": 385,
+	"./sl.js": 385,
+	"./sq": 386,
+	"./sq.js": 386,
+	"./sr": 387,
+	"./sr-cyrl": 388,
+	"./sr-cyrl.js": 388,
+	"./sr.js": 387,
+	"./ss": 389,
+	"./ss.js": 389,
+	"./sv": 390,
+	"./sv.js": 390,
+	"./sw": 391,
+	"./sw.js": 391,
+	"./ta": 392,
+	"./ta.js": 392,
+	"./te": 393,
+	"./te.js": 393,
+	"./tet": 394,
+	"./tet.js": 394,
+	"./tg": 395,
+	"./tg.js": 395,
+	"./th": 396,
+	"./th.js": 396,
+	"./tl-ph": 397,
+	"./tl-ph.js": 397,
+	"./tlh": 398,
+	"./tlh.js": 398,
+	"./tr": 399,
+	"./tr.js": 399,
+	"./tzl": 400,
+	"./tzl.js": 400,
+	"./tzm": 401,
+	"./tzm-latn": 402,
+	"./tzm-latn.js": 402,
+	"./tzm.js": 401,
+	"./ug-cn": 403,
+	"./ug-cn.js": 403,
+	"./uk": 404,
+	"./uk.js": 404,
+	"./ur": 405,
+	"./ur.js": 405,
+	"./uz": 406,
+	"./uz-latn": 407,
+	"./uz-latn.js": 407,
+	"./uz.js": 406,
+	"./vi": 408,
+	"./vi.js": 408,
+	"./x-pseudo": 409,
+	"./x-pseudo.js": 409,
+	"./yo": 410,
+	"./yo.js": 410,
+	"./zh-cn": 411,
+	"./zh-cn.js": 411,
+	"./zh-hk": 412,
+	"./zh-hk.js": 412,
+	"./zh-tw": 413,
+	"./zh-tw.js": 413
 };
 function webpackContext(req) {
 	return __webpack_require__(webpackContextResolve(req));
@@ -2393,10 +2406,10 @@ webpackContext.id = 595;
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MyApp; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(20);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(288);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(284);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(289);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(285);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ngx_translate_core__ = __webpack_require__(57);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_home_home__ = __webpack_require__(162);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_home_home__ = __webpack_require__(163);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2449,21 +2462,22 @@ var MyApp = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(20);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__(57);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_mv_common_components__ = __webpack_require__(289);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_mv_common_components__ = __webpack_require__(290);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_address_autocomplete_address_autocomplete__ = __webpack_require__(830);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_address_autocomplete_address_autocomplete_modal__ = __webpack_require__(168);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_address_autocomplete_address_autocomplete_modal__ = __webpack_require__(169);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__components_address_input_address_input__ = __webpack_require__(831);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__components_autocomplete_autocomplete__ = __webpack_require__(430);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__components_autocomplete_autocomplete_modal__ = __webpack_require__(167);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__components_autocomplete_autocomplete_modal__ = __webpack_require__(168);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__components_counter_input_counter_input__ = __webpack_require__(416);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__components_element_of_array_element_of_array__ = __webpack_require__(832);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__components_errors_display_errors_display__ = __webpack_require__(833);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__components_phone_input_phone_input__ = __webpack_require__(834);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__components_radio_list_radio_list__ = __webpack_require__(835);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__components_yes_no_list_yes_no_list__ = __webpack_require__(837);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__providers_answers__ = __webpack_require__(163);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__providers_loading__ = __webpack_require__(431);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__providers_prompt__ = __webpack_require__(169);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__components_phone_input_with_code_phone_input_with_code__ = __webpack_require__(835);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__components_radio_list_radio_list__ = __webpack_require__(836);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__components_yes_no_list_yes_no_list__ = __webpack_require__(838);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__providers_answers__ = __webpack_require__(164);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__providers_loading__ = __webpack_require__(431);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__providers_prompt__ = __webpack_require__(170);
 /* unused harmony namespace reexport */
 /* unused harmony namespace reexport */
 /* unused harmony namespace reexport */
@@ -2496,6 +2510,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
+
 var ComponentsIonicModule = /** @class */ (function () {
     function ComponentsIonicModule() {
     }
@@ -2505,9 +2520,9 @@ var ComponentsIonicModule = /** @class */ (function () {
             ngModule: ComponentsIonicModule_1,
             providers: [
                 { provide: 'COMPONENTES_CONFIG', useValue: componentesConfigModel },
-                __WEBPACK_IMPORTED_MODULE_15__providers_answers__["a" /* AnswersProvider */],
-                __WEBPACK_IMPORTED_MODULE_16__providers_loading__["a" /* LoadingProvider */],
-                __WEBPACK_IMPORTED_MODULE_17__providers_prompt__["a" /* PromptProvider */]
+                __WEBPACK_IMPORTED_MODULE_16__providers_answers__["a" /* AnswersProvider */],
+                __WEBPACK_IMPORTED_MODULE_17__providers_loading__["a" /* LoadingProvider */],
+                __WEBPACK_IMPORTED_MODULE_18__providers_prompt__["a" /* PromptProvider */]
             ]
         };
     };
@@ -2523,8 +2538,9 @@ var ComponentsIonicModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_10__components_element_of_array_element_of_array__["a" /* ElementOfArrayComponent */],
                 __WEBPACK_IMPORTED_MODULE_11__components_errors_display_errors_display__["a" /* ErrorsDisplayComponent */],
                 __WEBPACK_IMPORTED_MODULE_12__components_phone_input_phone_input__["a" /* PhoneInputComponent */],
-                __WEBPACK_IMPORTED_MODULE_13__components_radio_list_radio_list__["a" /* RadioListComponent */],
-                __WEBPACK_IMPORTED_MODULE_14__components_yes_no_list_yes_no_list__["a" /* YesNoListComponent */],
+                __WEBPACK_IMPORTED_MODULE_13__components_phone_input_with_code_phone_input_with_code__["a" /* PhoneInputWithCodeComponent */],
+                __WEBPACK_IMPORTED_MODULE_14__components_radio_list_radio_list__["a" /* RadioListComponent */],
+                __WEBPACK_IMPORTED_MODULE_15__components_yes_no_list_yes_no_list__["a" /* YesNoListComponent */],
             ],
             imports: [
                 __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["c" /* IonicModule */],
@@ -2548,8 +2564,9 @@ var ComponentsIonicModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_10__components_element_of_array_element_of_array__["a" /* ElementOfArrayComponent */],
                 __WEBPACK_IMPORTED_MODULE_11__components_errors_display_errors_display__["a" /* ErrorsDisplayComponent */],
                 __WEBPACK_IMPORTED_MODULE_12__components_phone_input_phone_input__["a" /* PhoneInputComponent */],
-                __WEBPACK_IMPORTED_MODULE_13__components_radio_list_radio_list__["a" /* RadioListComponent */],
-                __WEBPACK_IMPORTED_MODULE_14__components_yes_no_list_yes_no_list__["a" /* YesNoListComponent */],
+                __WEBPACK_IMPORTED_MODULE_13__components_phone_input_with_code_phone_input_with_code__["a" /* PhoneInputWithCodeComponent */],
+                __WEBPACK_IMPORTED_MODULE_14__components_radio_list_radio_list__["a" /* RadioListComponent */],
+                __WEBPACK_IMPORTED_MODULE_15__components_yes_no_list_yes_no_list__["a" /* YesNoListComponent */],
             ]
         })
     ], ComponentsIonicModule);
@@ -2569,7 +2586,7 @@ var ComponentsIonicModule = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_forms__ = __webpack_require__(14);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(20);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__address_autocomplete_modal__ = __webpack_require__(168);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__address_autocomplete_modal__ = __webpack_require__(169);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2613,9 +2630,6 @@ var AddressAutocompleteComponent = /** @class */ (function () {
         enumerable: true,
         configurable: true
     });
-    AddressAutocompleteComponent.prototype.ngOnInit = function () {
-        console.log(this.fullAddressDetails);
-    };
     /**
      * Open a modal with searchbar and results list.
      */
@@ -2640,7 +2654,6 @@ var AddressAutocompleteComponent = /** @class */ (function () {
      * @param value Value given from the model
      */
     AddressAutocompleteComponent.prototype.writeValue = function (value) {
-        console.log('writeValue =>', value);
         if (value) {
             this.addressValue = value;
         }
@@ -3171,7 +3184,7 @@ var ErrorsDisplayComponent = /** @class */ (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PhoneInputComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_forms__ = __webpack_require__(14);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_google_libphonenumber__ = __webpack_require__(413);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_google_libphonenumber__ = __webpack_require__(162);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_google_libphonenumber___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_google_libphonenumber__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -3204,6 +3217,7 @@ var PhoneNumberFormat = __WEBPACK_IMPORTED_MODULE_2_google_libphonenumber__["Pho
  */
 var PhoneInputComponent = /** @class */ (function () {
     function PhoneInputComponent() {
+        this.countryCode = 'FR';
         /**
          * The phone value stored in the model
          */
@@ -3239,7 +3253,7 @@ var PhoneInputComponent = /** @class */ (function () {
         },
         set: function (val) {
             try {
-                this.number = this.phoneUtil.parse(val, 'FR');
+                this.number = this.phoneUtil.parse(val, this.countryCode);
                 this._displayedPhoneValue = this.phoneUtil.format(this.number, PhoneNumberFormat.NATIONAL);
                 this.phoneValue = this.phoneUtil.format(this.number, PhoneNumberFormat.E164).replace('+', '00');
                 // numbers in +xxyyyy do not work on some Android versions
@@ -3281,9 +3295,13 @@ var PhoneInputComponent = /** @class */ (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
         __metadata("design:type", String)
     ], PhoneInputComponent.prototype, "label", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
+        __metadata("design:type", Object)
+    ], PhoneInputComponent.prototype, "countryCode", void 0);
     PhoneInputComponent = PhoneInputComponent_1 = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'mv-phone-input',template:/*ion-inline-start:"/media/data/Projects/componentes/ionic-components-v2/componentes/src/components/phone-input/phone-input.html"*/'<ion-input type="tel" [(ngModel)]="displayedPhoneValue"></ion-input>\n'/*ion-inline-end:"/media/data/Projects/componentes/ionic-components-v2/componentes/src/components/phone-input/phone-input.html"*/,
+            selector: 'mv-phone-input',template:/*ion-inline-start:"/media/data/Projects/componentes/ionic-components-v2/componentes/src/components/phone-input/phone-input.html"*/'<ion-input type="tel" [(ngModel)]="displayedPhoneValue"></ion-input>'/*ion-inline-end:"/media/data/Projects/componentes/ionic-components-v2/componentes/src/components/phone-input/phone-input.html"*/,
             providers: [
                 {
                     provide: __WEBPACK_IMPORTED_MODULE_1__angular_forms__["f" /* NG_VALUE_ACCESSOR */],
@@ -3305,10 +3323,126 @@ var PhoneInputComponent = /** @class */ (function () {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PhoneInputWithCodeComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_forms__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_google_libphonenumber__ = __webpack_require__(162);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_google_libphonenumber___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_google_libphonenumber__);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+// this kind of import is necessary for packaging to work
+
+/**
+ * Provides utils for phone numbers
+ */
+var PhoneNumberUtil = __WEBPACK_IMPORTED_MODULE_2_google_libphonenumber__["PhoneNumberUtil"];
+var phoneNumberUtil = PhoneNumberUtil.getInstance();
+/**
+ * Component providing an autocomplete input to selct country and an input to type a local phone number
+ * It returns an international phone number correctly formatted
+ *
+ * @example
+ * //TODO
+ */ var PhoneInputWithCodeComponent = /** @class */ (function () {
+    function PhoneInputWithCodeComponent() {
+        /**
+         * Container for the propagation function.
+         */
+        this.propagateChange = function (_) { };
+    }
+    PhoneInputWithCodeComponent_1 = PhoneInputWithCodeComponent;
+    Object.defineProperty(PhoneInputWithCodeComponent.prototype, "internationalPhoneValue", {
+        get: function () {
+            return this._internationalPhoneValue;
+        },
+        set: function (value) {
+            this._internationalPhoneValue = value;
+            this.propagateChange(this._internationalPhoneValue);
+        },
+        enumerable: true,
+        configurable: true
+    });
+    PhoneInputWithCodeComponent.prototype.writeValue = function (value) {
+        if (value) {
+            this.internationalPhoneValue = value;
+        }
+        else {
+            this.internationalPhoneValue = '';
+        }
+    };
+    /**
+     * This method is part of ControlValueAccessor interface.
+     * Its role is to set the function that will propagate changes from the DOM to the model.
+     *
+     * @param fn {function} Angular internal function
+     */
+    PhoneInputWithCodeComponent.prototype.registerOnChange = function (fn) {
+        this.propagateChange = fn;
+    };
+    /**
+     * This method is part of ControlValueAccessor interface.
+     * Not used here
+     */
+    PhoneInputWithCodeComponent.prototype.registerOnTouched = function () { };
+    PhoneInputWithCodeComponent.prototype.displayFunction = function (item) {
+        return "<p>\n      <span>" + item.label + "</span>\n      <span style=\"color=\"#606060 !important;\">(+" + phoneNumberUtil.getCountryCodeForRegion(item.id) + ")</span>\n    </p>";
+    };
+    PhoneInputWithCodeComponent.prototype.filterFunction = function (item, searchTerm) {
+        return item.label.toLowerCase().includes(searchTerm.toLowerCase());
+    };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
+        __metadata("design:type", Array)
+    ], PhoneInputWithCodeComponent.prototype, "countryList", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
+        __metadata("design:type", String)
+    ], PhoneInputWithCodeComponent.prototype, "label", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
+        __metadata("design:type", String)
+    ], PhoneInputWithCodeComponent.prototype, "countryLabel", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
+        __metadata("design:type", String)
+    ], PhoneInputWithCodeComponent.prototype, "phoneLabel", void 0);
+    PhoneInputWithCodeComponent = PhoneInputWithCodeComponent_1 = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: 'mv-phone-input-with-code',template:/*ion-inline-start:"/media/data/Projects/componentes/ionic-components-v2/componentes/src/components/phone-input-with-code/phone-input-with-code.html"*/'<ion-list>\n  <mv-autocomplete [label]="countryLabel" [list]="countryList" [allowCustom]="false" [display]="displayFunction" [filter]="filterFunction"\n    [(ngModel)]="selectedCountry"></mv-autocomplete>\n  <ion-item>\n    <ion-label text-wrap>{{ phoneLabel }}</ion-label>\n    <mv-phone-input item-content [(ngModel)]="internationalPhoneValue" [countryCode]="selectedCountry?.id"> </mv-phone-input>\n  </ion-item>\n</ion-list>'/*ion-inline-end:"/media/data/Projects/componentes/ionic-components-v2/componentes/src/components/phone-input-with-code/phone-input-with-code.html"*/,
+            providers: [
+                {
+                    provide: __WEBPACK_IMPORTED_MODULE_1__angular_forms__["f" /* NG_VALUE_ACCESSOR */],
+                    useExisting: Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_14" /* forwardRef */])(function () { return PhoneInputWithCodeComponent_1; }),
+                    multi: true
+                }
+            ]
+        })
+    ], PhoneInputWithCodeComponent);
+    return PhoneInputWithCodeComponent;
+    var PhoneInputWithCodeComponent_1;
+}());
+
+//# sourceMappingURL=phone-input-with-code.js.map
+
+/***/ }),
+
+/***/ 836:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RadioListComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_forms__ = __webpack_require__(14);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__helpers_enums_helper__ = __webpack_require__(836);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__helpers_enums_helper__ = __webpack_require__(837);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs__ = __webpack_require__(0);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -3452,7 +3586,7 @@ var RadioListComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 836:
+/***/ 837:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -3478,7 +3612,7 @@ var EnumsHelper = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 837:
+/***/ 838:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";

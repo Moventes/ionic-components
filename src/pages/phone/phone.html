@@ -8,6 +8,16 @@
 
 
 <ion-content padding>
+  <ion-title>Phone input with code</ion-title>
+  <ion-item>
+    <mv-phone-input-with-code label="Phone" phoneLabel="Phone" [countryList]="countryList" countryLabel="Country" [(ngModel)]="intlPhone"></mv-phone-input-with-code>
+  </ion-item>
+  <ion-item>
+    <pre>
+          {{ intlPhone | json }}
+        </pre>
+  </ion-item>
+  <ion-title>Phone input standard</ion-title>
   <form *ngIf="form" [formGroup]="form" novalidate>
     <ion-item>
       <ion-label text-wrap>{{'Phone number' | translate}}</ion-label>
