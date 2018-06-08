@@ -1,5 +1,5 @@
 import { Component, forwardRef, NgZone, ViewChild } from '@angular/core';
-import { NG_VALUE_ACCESSOR, ControlValueAccessor } from '@angular/forms';
+import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 import { NavParams, Searchbar, ViewController } from 'ionic-angular';
 import { Address, AddressDetails } from 'mv-common-components';
 
@@ -117,7 +117,7 @@ export class AddressAutocompleteModalComponent implements ControlValueAccessor {
     this.fullAddressDetails = this.params.get('fullAddressDetails');
     setTimeout(() => {
       this.searchBar.setFocus();
-    }, 150);
+    }, 500);
   }
 
   /**
