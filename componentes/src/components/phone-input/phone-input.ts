@@ -36,10 +36,19 @@ const PhoneNumberFormat = libPhoneNumber.PhoneNumberFormat;
 })
 export class PhoneInputComponent implements ControlValueAccessor {
   @Input()
-  label: string;
+  public label: string;
+
+  private _countryCode = 'FR';
 
   @Input()
-  countryCode = 'FR';
+  public set countryCode(value: string) {
+    this._countryCode = value;
+    this.displayedPhoneValue = this.displayedPhoneValue;
+  }
+
+  public get countryCode(): string {
+    return this._countryCode;
+  }
 
   /**
    * The phone value stored in the model

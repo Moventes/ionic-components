@@ -1,4 +1,4 @@
-import { Component, forwardRef, OnInit, Input, NgZone } from '@angular/core';
+import { Component, forwardRef, Input, ChangeDetectorRef } from '@angular/core';
 import { NG_VALUE_ACCESSOR, ControlValueAccessor } from '@angular/forms';
 
 // this kind of import is necessary for packaging to work
@@ -32,16 +32,16 @@ const phoneNumberUtil = PhoneNumberUtil.getInstance();
 })
 export class PhoneInputWithCodeComponent implements ControlValueAccessor {
   @Input()
-  countryList: Country[];
+  public countryList: Country[];
 
   @Input()
-  label: string;
+  public label: string;
 
   @Input()
-  countryLabel: string;
+  public countryLabel: string;
 
   @Input()
-  phoneLabel: string;
+  public phoneLabel: string;
 
   public selectedCountry: Country;
 
@@ -52,8 +52,13 @@ export class PhoneInputWithCodeComponent implements ControlValueAccessor {
   }
   public set internationalPhoneValue(value: string) {
     this._internationalPhoneValue = value;
-    this.propagateChange(this._internationalPhoneValue);
+    setTimeout(() => this.propagateChange(this._internationalPhoneValue));
+    // this.cd.markForCheck();
   }
+
+  // constructor(private cd: ChangeDetectorRef) {
+
+  // }
 
   public writeValue(value: string): void {
     if (value) {
