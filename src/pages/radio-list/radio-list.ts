@@ -4,14 +4,14 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { FormControl } from '@angular/forms';
 import { Observable } from 'rxjs';
 import { ISubscription } from 'rxjs/Subscription';
-import { EnumValidator } from "../../validators/enum.validator";
+import { EnumValidator } from '../../validators/enum.validator';
 enum EnumOfChoices {
   Chien,
   Chat,
   Oiseau
 }
 
-const importedEnumName = "animals";
+const importedEnumName = 'animals';
 
 const choicesArray: string[] = ['Chien', 'Chat', 'Oiseau', 'Chtulu'];
 

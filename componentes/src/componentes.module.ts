@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { IonicModule } from 'ionic-angular';
 import { TranslateModule } from '@ngx-translate/core';
 
+import { AddressAutocompleteComponent } from './components/address-autocomplete/address-autocomplete';
+import { AddressAutocompleteModalComponent } from './components/address-autocomplete/address-autocomplete-modal';
 import { AddressInputComponent } from './components/address-input/address-input';
 import { CounterInputComponent } from './components/counter-input/counter-input';
 import { ElementOfArrayComponent } from './components/element-of-array/element-of-array';
@@ -19,9 +21,14 @@ import { ComponentesConfigModel } from './models/componentes-config.model';
 export * from './providers/answers';
 export * from './providers/loading';
 export * from './providers/prompt';
+export * from './components/address-autocomplete/address-autocomplete-modal';
+
+
 
 @NgModule({
   declarations: [
+    AddressAutocompleteComponent,
+    AddressAutocompleteModalComponent,
     AddressInputComponent,
     CounterInputComponent,
     ElementOfArrayComponent,
@@ -42,6 +49,8 @@ export * from './providers/prompt';
     TranslateModule,
   ],
   exports: [
+    AddressAutocompleteComponent,
+    AddressAutocompleteModalComponent,
     AddressInputComponent,
     CounterInputComponent,
     ElementOfArrayComponent,

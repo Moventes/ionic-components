@@ -1,13 +1,28 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>AddressInput</ion-title>
+    <ion-title>AddressInput / AddressAutocomplete</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
+  <ion-title>AddressAutocomplete</ion-title>
+  <ion-item>
+    <mv-address-autocomplete label="Adress full" fullAddressDetails="true" [(ngModel)]="addressFull"></mv-address-autocomplete>
+    <pre>
+    {{ addressFull | json }}
+  </pre>
+    <mv-address-autocomplete label="Adress lite" [(ngModel)]="addressLite"></mv-address-autocomplete>
+    <pre>
+    {{ addressLite | json }}
+  </pre>
+  </ion-item>
+  <ion-item>
+    <pre>{{ addressResult | json }}</pre>
+  </ion-item>
+  <ion-title>AddressInput (deprecated)</ion-title>
   <form *ngIf="form" [formGroup]="form" novalidate>
     <mv-address-input label="Address" formControlName="address"></mv-address-input>
 

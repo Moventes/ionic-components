@@ -1,4 +1,4 @@
-import { Component, forwardRef } from '@angular/core';
+import { Component, forwardRef, Input } from '@angular/core';
 import { NG_VALUE_ACCESSOR, ControlValueAccessor } from '@angular/forms';
 
 // this kind of import is necessary for packaging to work
@@ -7,16 +7,17 @@ import * as libPhoneNumber from 'google-libphonenumber';
 /**
  * Provides utils for phone numbers
  */
-let PhoneNumberUtil = libPhoneNumber.default.PhoneNumberUtil;
+const PhoneNumberUtil = libPhoneNumber.PhoneNumberUtil;
 
 /**
  * Provides the differents format used by Google's libphonenumber
  */
-let PhoneNumberFormat = libPhoneNumber.default.PhoneNumberFormat;
+const PhoneNumberFormat = libPhoneNumber.PhoneNumberFormat;
 
 
 /**
- * This components aims to provide an input that will display a national phone number while you're typing but will save an international (E164) phone number .
+ * This components aims to provide an input that will display a national phone number while you're typing
+ * but will save an international (E164) phone number .
  * It's based on google-libphonenumber.
  *
  * @example
@@ -31,15 +32,16 @@ let PhoneNumberFormat = libPhoneNumber.default.PhoneNumberFormat;
       useExisting: forwardRef(() => PhoneInputComponent),
       multi: true
     }
-  ],
-  inputs: ['label']
+  ]
 })
 export class PhoneInputComponent implements ControlValueAccessor {
+  @Input()
+  label: string;
 
   /**
    * The phone value stored in the model
    */
-  private _phoneValue: string = '';
+  private _phoneValue = '';
 
   /**
    * The phone value as it will be displayed in the DOM
@@ -74,7 +76,8 @@ export class PhoneInputComponent implements ControlValueAccessor {
     try {
       this.number = this.phoneUtil.parse(val, 'FR');
       this._displayedPhoneValue = this.phoneUtil.format(this.number, PhoneNumberFormat.NATIONAL);
-      this.phoneValue = this.phoneUtil.format(this.number, PhoneNumberFormat.E164).replace('+', '00'); // numbers in +xxyyyy do not work on some Android versions
+      this.phoneValue = this.phoneUtil.format(this.number, PhoneNumberFormat.E164).replace('+', '00');
+      // numbers in +xxyyyy do not work on some Android versions
     } catch (e) {
       this._displayedPhoneValue = val;
       this.phoneValue = null;

@@ -26,7 +26,7 @@ import { NG_VALUE_ACCESSOR, ControlValueAccessor } from '@angular/forms';
 export class ElementOfArrayComponent implements ControlValueAccessor {
 
   @Input()
-  public index: number = 0;
+  public index = 0;
 
   /**
    * The elements value stored in the model

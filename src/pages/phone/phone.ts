@@ -16,7 +16,7 @@ import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms'
 export class PhonePage {
 
   private form: FormGroup;
-  private phone: string = '0613256545';
+  private phone = '0613256545';
 
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public fb: FormBuilder) {

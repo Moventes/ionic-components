@@ -1,9 +1,9 @@
-import { AnswersProvider } from './../../providers/answers';
 import { Component, OnDestroy } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { FormBuilder, FormControl, Validators } from '@angular/forms';
 
 import { HomePage } from '../home/home';
+import { AnswersProvider } from '../../../componentes/src/providers/answers';
 
 /**
  * Generated class for the YesNoListPage page.
@@ -17,7 +17,7 @@ import { HomePage } from '../home/home';
   templateUrl: 'yes-no-list.html'
 })
 export class YesNoListPage implements OnDestroy {
-  question = "Je voudrais être capable de"
+  question = 'Je voudrais être capable de';
   itemsList = [
     {
       $id: 'id5',
@@ -58,7 +58,7 @@ export class YesNoListPage implements OnDestroy {
     this.answers = this.answersProvider.answers;
     this.callback = () => {
       this.navCtrl.push(HomePage);
-    }
+    };
   }
 
   ngOnDestroy() {

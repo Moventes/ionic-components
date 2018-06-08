@@ -77,7 +77,7 @@ export class YesNoListComponent implements ControlValueAccessor {
   /**
    * Percentage of the questionary reached
    */
-  progress: string
+  progress: string;
 
   /**
    * Constructor of the components,
@@ -102,8 +102,7 @@ export class YesNoListComponent implements ControlValueAccessor {
     if (this.currentItem < this.sortedItemsList.length - 1) {
       this.currentItem++;
       this.progress = (Math.round(100 * this.currentItem / (this.sortedItemsList.length - 1))).toString().concat('%');
-    }
-    else {
+    } else {
       this.callback();
     }
   }
@@ -135,8 +134,7 @@ export class YesNoListComponent implements ControlValueAccessor {
   writeValue(value: any) {
     if (value !== undefined) {
       this.answers = value;
-    }
-    else {
+    } else {
       this.answers = {};
     }
   }

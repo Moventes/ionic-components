@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { FormGroup, FormBuilder, FormControl, Validators } from '@angular/forms';
+import { Address } from 'mv-common-components';
 
 /**
  * Generated class for the AddressPage page.
@@ -17,6 +18,8 @@ export class AddressPage {
 
   private form: FormGroup;
   private address: string;
+  addressFull: Address;
+  addressLite: Address;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public fb: FormBuilder) {
     this.form = this.fb.group({

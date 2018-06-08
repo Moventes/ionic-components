@@ -51,7 +51,7 @@ export class PromptProvider {
         message = this.config.promptParseFunction(message);
       } else {
         if (message.display) {
-          message = message.display
+          message = message.display;
         } else if (message.message) {
           message = message.message;
         } else {
@@ -84,7 +84,7 @@ export class PromptProvider {
         });
 
         toast.present();
-      })
+      });
   }
 
 }
