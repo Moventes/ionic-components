@@ -59,7 +59,7 @@ var HomePage = /** @class */ (function () {
     };
     HomePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-home',template:/*ion-inline-start:"/media/data/Projects/componentes/ionic-components-v2/src/pages/home/home.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      Componentes Demo Project\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <button ion-button full (click)=goToAddressPage()>Address Input</button>\n  <button ion-button full (click)=goToAutocompletePage()>Autocomplete Input</button>\n  <button ion-button full (click)=goToCounterPage()>Counter Input</button>\n  <button ion-button full (click)=goToPhonePage()>Phone Input</button>\n  <button ion-button full (click)=goToRadioListPage()>Radio List</button>\n  <button ion-button full (click)=goToYesNoListPage()>Yes No List</button>\n  <button ion-button full (click)=goToIteratorPipePage()>Iterator Pipe</button>\n</ion-content>'/*ion-inline-end:"/media/data/Projects/componentes/ionic-components-v2/src/pages/home/home.html"*/
+            selector: 'page-home',template:/*ion-inline-start:"/Users/Shared/projects/Moventes/Dev/Componentes/ionic-components/src/pages/home/home.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      Componentes Demo Project\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <button ion-button full (click)=goToAddressPage()>Address Input</button>\n  <button ion-button full (click)=goToAutocompletePage()>Autocomplete Input</button>\n  <button ion-button full (click)=goToCounterPage()>Counter Input</button>\n  <button ion-button full (click)=goToPhonePage()>Phone Input</button>\n  <button ion-button full (click)=goToRadioListPage()>Radio List</button>\n  <button ion-button full (click)=goToYesNoListPage()>Yes No List</button>\n  <button ion-button full (click)=goToIteratorPipePage()>Iterator Pipe</button>\n</ion-content>'/*ion-inline-end:"/Users/Shared/projects/Moventes/Dev/Componentes/ionic-components/src/pages/home/home.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]])
     ], HomePage);
@@ -186,7 +186,7 @@ var AutocompleteModalComponent = /** @class */ (function () {
         this.customEnabled = false;
         setTimeout(function () {
             _this.searchBar.setFocus();
-        }, 150);
+        }, 500);
     };
     /**
      * Empties the propositions list.
@@ -292,7 +292,7 @@ var AutocompleteModalComponent = /** @class */ (function () {
     ], AutocompleteModalComponent.prototype, "searchBar", void 0);
     AutocompleteModalComponent = AutocompleteModalComponent_1 = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'mv-autocomplete-modal',template:/*ion-inline-start:"/media/data/Projects/componentes/ionic-components-v2/componentes/src/components/autocomplete/autocomplete-modal.html"*/'<ion-header>\n  <ion-toolbar>\n    <ion-buttons start>\n      <button ion-button clear color="dark" icon-only (click)="closeModal()">\n        <ion-icon name="close"></ion-icon>\n      </button>\n    </ion-buttons>\n    <ion-title>{{ label }}</ion-title>\n  </ion-toolbar>\n</ion-header>\n<ion-content>\n  <ion-item>\n    <ion-searchbar #search type="text" id="search" [(ngModel)]="displayedItemValue" (ionInput)="inputOnSearchbar(true)" (ionFocus)="inputOnSearchbar(false)"\n      (ionBlur)="onBlur()" [placeholder]="label"></ion-searchbar>\n  </ion-item>\n  <ion-item *ngIf="results.length > 0 || (allowCustom && displayedItemValue)">\n    <ion-list>\n      <ion-item text-wrap *ngFor="let item of results" tappable (click)="selectSearchResult(item)" [innerHTML]="display(item) | mvSafeHtml">\n      </ion-item>\n      <ion-item (click)="selectCustomItem()" *ngIf="allowCustom && customEnabled">\n        <p style="color: #606060; font-style: oblique">{{ displayedItemValue }}</p>\n      </ion-item>\n    </ion-list>\n  </ion-item>\n  <!-- some html element is needed by maps API to "display" attribution when no maps is generated -->\n  <p id="attribution"></p>\n</ion-content>'/*ion-inline-end:"/media/data/Projects/componentes/ionic-components-v2/componentes/src/components/autocomplete/autocomplete-modal.html"*/,
+            selector: 'mv-autocomplete-modal',template:/*ion-inline-start:"/Users/Shared/projects/Moventes/Dev/Componentes/ionic-components/componentes/src/components/autocomplete/autocomplete-modal.html"*/'<ion-header>\n  <ion-toolbar>\n    <ion-buttons start>\n      <button ion-button clear color="dark" icon-only (click)="closeModal()">\n        <ion-icon name="close"></ion-icon>\n      </button>\n    </ion-buttons>\n    <ion-title>{{ label }}</ion-title>\n  </ion-toolbar>\n</ion-header>\n<ion-content>\n  <ion-item>\n    <ion-searchbar #search type="text" id="search" [(ngModel)]="displayedItemValue" (ionInput)="inputOnSearchbar(true)" (ionFocus)="inputOnSearchbar(false)"\n      (ionBlur)="onBlur()" [placeholder]="label"></ion-searchbar>\n  </ion-item>\n  <ion-item *ngIf="results.length > 0 || (allowCustom && displayedItemValue)">\n    <ion-list>\n      <ion-item text-wrap *ngFor="let item of results" tappable (click)="selectSearchResult(item)" [innerHTML]="display(item) | mvSafeHtml">\n      </ion-item>\n      <ion-item (click)="selectCustomItem()" *ngIf="allowCustom && customEnabled">\n        <p style="color: #606060; font-style: oblique">{{ displayedItemValue }}</p>\n      </ion-item>\n    </ion-list>\n  </ion-item>\n  <!-- some html element is needed by maps API to "display" attribution when no maps is generated -->\n  <p id="attribution"></p>\n</ion-content>'/*ion-inline-end:"/Users/Shared/projects/Moventes/Dev/Componentes/ionic-components/componentes/src/components/autocomplete/autocomplete-modal.html"*/,
             providers: [
                 {
                     provide: __WEBPACK_IMPORTED_MODULE_1__angular_forms__["f" /* NG_VALUE_ACCESSOR */],
@@ -396,7 +396,7 @@ var AddressAutocompleteModalComponent = /** @class */ (function () {
         this.fullAddressDetails = this.params.get('fullAddressDetails');
         setTimeout(function () {
             _this.searchBar.setFocus();
-        }, 150);
+        }, 500);
     };
     /**
      * Empties the propositions list.
@@ -608,7 +608,7 @@ var AddressAutocompleteModalComponent = /** @class */ (function () {
     ], AddressAutocompleteModalComponent.prototype, "searchBar", void 0);
     AddressAutocompleteModalComponent = AddressAutocompleteModalComponent_1 = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'mv-address-autocomplete-modal',template:/*ion-inline-start:"/media/data/Projects/componentes/ionic-components-v2/componentes/src/components/address-autocomplete/address-autocomplete-modal.html"*/'<ion-header>\n  <ion-toolbar>\n    <ion-buttons start>\n      <button ion-button clear color="dark" icon-only (click)="closeModal()">\n        <ion-icon name="close"></ion-icon>\n      </button>\n    </ion-buttons>\n    <ion-title>{{ label }}</ion-title>\n  </ion-toolbar>\n</ion-header>\n<ion-content>\n  <ion-item>\n    <ion-searchbar #search type="text" id="search" [(ngModel)]="displayedAddressValue" (ionInput)="inputOnSearchbar(true)" (ionFocus)="inputOnSearchbar(false)"\n      (ionBlur)="onBlur()" [placeholder]="label"></ion-searchbar>\n  </ion-item>\n  <ion-item *ngIf="results.length > 0">\n    <ion-list>\n      <ion-item text-wrap *ngFor="let item of results" tappable (click)="selectSearchResult(item)">\n        {{ item.description || item.formatted_address }}\n      </ion-item>\n      <ion-item (click)="selectCustomAddress()" *ngIf="allowCustom && customEnabled">\n        <p style="color: #606060; font-style: oblique">{{ displayedAddressValue }}</p>\n      </ion-item>\n    </ion-list>\n  </ion-item>\n  <!-- some html element is needed by maps API to "display" attribution when no maps is generated -->\n  <p id="attribution"></p>\n</ion-content>'/*ion-inline-end:"/media/data/Projects/componentes/ionic-components-v2/componentes/src/components/address-autocomplete/address-autocomplete-modal.html"*/,
+            selector: 'mv-address-autocomplete-modal',template:/*ion-inline-start:"/Users/Shared/projects/Moventes/Dev/Componentes/ionic-components/componentes/src/components/address-autocomplete/address-autocomplete-modal.html"*/'<ion-header>\n  <ion-toolbar>\n    <ion-buttons start>\n      <button ion-button clear color="dark" icon-only (click)="closeModal()">\n        <ion-icon name="close"></ion-icon>\n      </button>\n    </ion-buttons>\n    <ion-title>{{ label }}</ion-title>\n  </ion-toolbar>\n</ion-header>\n<ion-content>\n  <ion-item>\n    <ion-searchbar #search type="text" id="search" [(ngModel)]="displayedAddressValue" (ionInput)="inputOnSearchbar(true)" (ionFocus)="inputOnSearchbar(false)"\n      (ionBlur)="onBlur()" [placeholder]="label"></ion-searchbar>\n  </ion-item>\n  <ion-item *ngIf="results.length > 0 || (allowCustom && displayedAddressValue)">\n    <ion-list>\n      <ion-item text-wrap *ngFor="let item of results" tappable (click)="selectSearchResult(item)">\n        {{ item.description || item.formatted_address }}\n      </ion-item>\n      <ion-item (click)="selectCustomAddress()" *ngIf="allowCustom && customEnabled">\n        <p style="color: #606060; font-style: oblique">{{ displayedAddressValue }}</p>\n      </ion-item>\n    </ion-list>\n  </ion-item>\n  <!-- some html element is needed by maps API to "display" attribution when no maps is generated -->\n  <p id="attribution"></p>\n</ion-content>'/*ion-inline-end:"/Users/Shared/projects/Moventes/Dev/Componentes/ionic-components/componentes/src/components/address-autocomplete/address-autocomplete-modal.html"*/,
             providers: [
                 {
                     provide: __WEBPACK_IMPORTED_MODULE_1__angular_forms__["f" /* NG_VALUE_ACCESSOR */],
@@ -775,319 +775,6 @@ webpackEmptyAsyncContext.id = 244;
 
 /***/ }),
 
-/***/ 289:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ComponentsCommonModule; });
-/* unused harmony export SortPipe */
-/* unused harmony export SafeHtmlPipe */
-/* unused harmony export CircularJsonPipe */
-/* unused harmony export IteratorPipe */
-/* unused harmony export ɵb */
-/* unused harmony export ɵa */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_tslib__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_common__ = __webpack_require__(55);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ngx_translate_core__ = __webpack_require__(57);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_circular_json__ = __webpack_require__(593);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_circular_json___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_circular_json__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_moment__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_moment___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_moment__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__angular_platform_browser__ = __webpack_require__(46);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_google_libphonenumber__ = __webpack_require__(413);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_google_libphonenumber___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8_google_libphonenumber__);
-
-
-
-
-
-
-
-
-
-
-/**
- * This pipe extends the AsyncPipe.
- * It takes an object, an enum or an observable as an input and returns an array.
- * The array is a list of the different objects in case of an observable.
- * The array is a list of objects {key: key, value: value} in case of an object or an enum.
- */
-var IteratorPipe = /** @class */ (function (_super) {
-    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __extends */])(IteratorPipe, _super);
-    function IteratorPipe() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    /**
-     * Method returning the array from in object
-     * @param {?} object the object to transform
-     *
-     * @return {?} list The array build from the object
-     */
-    IteratorPipe.prototype.transform = function (object) {
-        if (object instanceof __WEBPACK_IMPORTED_MODULE_1_rxjs__["Observable"]) {
-            return _super.prototype.transform.call(this, object);
-        }
-        var /** @type {?} */ list = [];
-        // tslint:disable-next-line:forin
-        for (var /** @type {?} */ key in object) {
-            list.push({ key: key, value: object[key] });
-        }
-        return list;
-    };
-    return IteratorPipe;
-}(__WEBPACK_IMPORTED_MODULE_3__angular_common__["b" /* AsyncPipe */]));
-IteratorPipe.decorators = [
-    { type: __WEBPACK_IMPORTED_MODULE_2__angular_core__["S" /* Pipe */], args: [{
-                name: 'mvIterator'
-            },] },
-];
-
-/**
- * mvValueFromEnum pipe
- * It takes a string and an enum as inputs and returns the translation of the value from enum.
- */
-var ValueFromEnumPipe = /** @class */ (function (_super) {
-    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __extends */])(ValueFromEnumPipe, _super);
-    function ValueFromEnumPipe() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    /**
-     * Method returning the translated value.
-     * @param {?} key
-     * @param {?} enumeration
-     * @return {?} list The array build from the object
-     */
-    ValueFromEnumPipe.prototype.transform = function (key, enumeration) {
-        var /** @type {?} */ value = enumeration[key];
-        return _super.prototype.transform.call(this, value);
-    };
-    return ValueFromEnumPipe;
-}(__WEBPACK_IMPORTED_MODULE_4__ngx_translate_core__["c" /* TranslatePipe */]));
-ValueFromEnumPipe.decorators = [
-    { type: __WEBPACK_IMPORTED_MODULE_2__angular_core__["S" /* Pipe */], args: [{
-                name: 'mvValueFromEnum'
-            },] },
-];
-
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
- */
-var CircularJsonPipe = /** @class */ (function () {
-    function CircularJsonPipe() {
-    }
-    /**
-     * @param {?} obj
-     * @return {?}
-     */
-    CircularJsonPipe.prototype.transform = function (obj) {
-        return Object(__WEBPACK_IMPORTED_MODULE_5_circular_json__["stringify"])(obj, null, 2);
-    };
-    return CircularJsonPipe;
-}());
-CircularJsonPipe.decorators = [
-    { type: __WEBPACK_IMPORTED_MODULE_2__angular_core__["S" /* Pipe */], args: [{ name: 'mvCircularJson' },] },
-];
-
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
- */
-var /** @type {?} */ moment = __WEBPACK_IMPORTED_MODULE_6_moment__;
-/**
- * SortPipe pipe.
- * @argument args.property name of the property used to sort the array
- * @argument args.order order of the list (asc or desc)
- *
- * See https://angular.io/api/core/Pipe for more info on Angular Pipes.
- */
-var SortPipe = /** @class */ (function () {
-    function SortPipe() {
-    }
-    /**
-     * @param {?} array
-     * @param {?} args
-     * @return {?}
-     */
-    SortPipe.prototype.transform = function (array, args) {
-        if (typeof array === 'undefined' || array === null || !(array.length > 1)) {
-            return array;
-        }
-        var /** @type {?} */ order = 1;
-        if (typeof args.order === 'string') {
-            if (args.order === 'desc' || args.order === '-' || args.order === '>') {
-                order = -1;
-            }
-        }
-        else if (typeof args.order === 'number') {
-            order = args.order;
-        }
-        if (typeof args.property !== 'string') {
-            throw new Error('property param of the pipe "order" should be a string');
-        }
-        var /** @type {?} */ property = args.property.trim();
-        return array.sort(function (a, b) {
-            if (a === b || a[property] === b[property]) {
-                return 0;
-            }
-            else if (typeof (a[property]) === 'undefined' || a[property] === null) {
-                return -1 * order;
-            }
-            else if (typeof (b[property]) === 'undefined' || b[property] === null) {
-                return 1 * order;
-            }
-            else if ((a[property] instanceof Date || a[property] instanceof moment) && (b[property] instanceof Date || b[property] instanceof moment)) {
-                var /** @type {?} */ aMoment = moment(a[property]);
-                var /** @type {?} */ bMoment = moment(b[property]);
-                return aMoment.diff(bMoment) * order;
-            }
-            else if (typeof a[property] === 'number' && typeof b[property] === 'number') {
-                return (a[property] - b[property]) * order;
-            }
-            else if (typeof a[property] === 'string' && typeof b[property] === 'string') {
-                return a[property].localeCompare(b[property]) * order;
-            }
-            else {
-                throw new Error('type of ' + property + ' is not handled by "sort" pipe');
-            }
-        });
-    };
-    return SortPipe;
-}());
-SortPipe.decorators = [
-    { type: __WEBPACK_IMPORTED_MODULE_2__angular_core__["S" /* Pipe */], args: [{
-                name: 'mvSort',
-            },] },
-];
-
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
- */
-var SafeHtmlPipe = /** @class */ (function () {
-    /**
-     * @param {?} sanitized
-     */
-    function SafeHtmlPipe(sanitized) {
-        this.sanitized = sanitized;
-    }
-    /**
-     * @param {?} value
-     * @return {?}
-     */
-    SafeHtmlPipe.prototype.transform = function (value) {
-        return this.sanitized.bypassSecurityTrustHtml(value);
-    };
-    return SafeHtmlPipe;
-}());
-SafeHtmlPipe.decorators = [
-    { type: __WEBPACK_IMPORTED_MODULE_2__angular_core__["S" /* Pipe */], args: [{ name: 'mvSafeHtml' },] },
-];
-/** @nocollapse */
-SafeHtmlPipe.ctorParameters = function () { return [
-    { type: __WEBPACK_IMPORTED_MODULE_7__angular_platform_browser__["c" /* DomSanitizer */], },
-]; };
-
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
- */
-var /** @type {?} */ PhoneNumberUtil$1 = __WEBPACK_IMPORTED_MODULE_8_google_libphonenumber__["PhoneNumberUtil"];
-var /** @type {?} */ PhoneNumberFormat$1 = __WEBPACK_IMPORTED_MODULE_8_google_libphonenumber__["PhoneNumberFormat"];
-// const PhoneNumberType = libPhoneNumber.PhoneNumberType;
-var /** @type {?} */ phoneUtil = PhoneNumberUtil$1.getInstance();
-/**
- * mvPhoneFormat pipe.
- * @argument phoneToFormat phone number to format
- * @argument countryCode country code in 2 caracters (eg. 'FR')
- *
- * See https://angular.io/api/core/Pipe for more info on Angular Pipes.
- */
-var PhoneFormatPipe = /** @class */ (function () {
-    function PhoneFormatPipe() {
-    }
-    /**
-     * @param {?} phoneToFormat
-     * @param {?} countryCode
-     * @return {?}
-     */
-    PhoneFormatPipe.prototype.transform = function (phoneToFormat, countryCode) {
-        try {
-            var /** @type {?} */ gNumber = phoneUtil.parse(phoneToFormat.replace(/\s/, ''), countryCode);
-            return phoneUtil.format(gNumber, PhoneNumberFormat$1.NATIONAL);
-        }
-        catch (err) {
-            return phoneToFormat;
-        }
-    };
-    return PhoneFormatPipe;
-}());
-PhoneFormatPipe.decorators = [
-    { type: __WEBPACK_IMPORTED_MODULE_2__angular_core__["S" /* Pipe */], args: [{
-                name: 'mvPhoneFormat',
-            },] },
-];
-
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
- */
-var ComponentsCommonModule = /** @class */ (function () {
-    function ComponentsCommonModule() {
-    }
-    /**
-     * @return {?}
-     */
-    ComponentsCommonModule.forRoot = function () {
-        return {
-            ngModule: ComponentsCommonModule,
-            providers: []
-        };
-    };
-    return ComponentsCommonModule;
-}());
-ComponentsCommonModule.decorators = [
-    { type: __WEBPACK_IMPORTED_MODULE_2__angular_core__["I" /* NgModule */], args: [{
-                imports: [
-                    __WEBPACK_IMPORTED_MODULE_3__angular_common__["c" /* CommonModule */]
-                ],
-                declarations: [
-                    IteratorPipe,
-                    ValueFromEnumPipe,
-                    PhoneFormatPipe,
-                    CircularJsonPipe,
-                    SortPipe,
-                    SafeHtmlPipe
-                ],
-                exports: [
-                    IteratorPipe,
-                    ValueFromEnumPipe,
-                    PhoneFormatPipe,
-                    CircularJsonPipe,
-                    SortPipe,
-                    SafeHtmlPipe
-                ]
-            },] },
-];
-
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
- */
-
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
- */
-
-
-//# sourceMappingURL=mv-common-components.js.map
-
-
-/***/ }),
-
 /***/ 414:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -1128,7 +815,7 @@ var AddressPage = /** @class */ (function () {
     };
     AddressPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-address',template:/*ion-inline-start:"/media/data/Projects/componentes/ionic-components-v2/src/pages/address/address.html"*/'<ion-header>\n\n  <ion-navbar>\n    <ion-title>AddressInput / AddressAutocomplete</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <ion-title>AddressAutocomplete</ion-title>\n  <ion-item>\n    <mv-address-autocomplete label="Adress full" [fullAddressDetails]="true" [(ngModel)]="addressFull" [allowCustom]="true"></mv-address-autocomplete>\n    <pre>\n    {{ addressFull | json }}\n  </pre>\n    <mv-address-autocomplete label="Adress lite" [fullAddressDetails]="false" [(ngModel)]="addressLite" [allowCustom]="true"></mv-address-autocomplete>\n    <pre>\n    {{ addressLite | json }}\n  </pre>\n  </ion-item>\n  <ion-item>\n    <pre>{{ addressResult | json }}</pre>\n  </ion-item>\n  <ion-title>AddressInput (deprecated)</ion-title>\n  <form *ngIf="form" [formGroup]="form" novalidate>\n    <mv-address-input label="Address" formControlName="address"></mv-address-input>\n\n    {{form.value | mvCircularJson}}\n\n    <mv-errors-display target="address"></mv-errors-display>\n\n    <ion-item>\n      <button ion-button type="submit" [disabled]="!form.valid" (click)="onSubmit()">Submit</button>\n    </ion-item>\n  </form>\n</ion-content>'/*ion-inline-end:"/media/data/Projects/componentes/ionic-components-v2/src/pages/address/address.html"*/,
+            selector: 'page-address',template:/*ion-inline-start:"/Users/Shared/projects/Moventes/Dev/Componentes/ionic-components/src/pages/address/address.html"*/'<ion-header>\n\n  <ion-navbar>\n    <ion-title>AddressInput / AddressAutocomplete</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <ion-title>AddressAutocomplete</ion-title>\n  <ion-item>\n    <mv-address-autocomplete label="Adress full" [fullAddressDetails]="true" [(ngModel)]="addressFull" [allowCustom]="true"></mv-address-autocomplete>\n    <pre>\n    {{ addressFull | json }}\n  </pre>\n    <mv-address-autocomplete label="Adress lite" [fullAddressDetails]="false" [(ngModel)]="addressLite" [allowCustom]="true"></mv-address-autocomplete>\n    <pre>\n    {{ addressLite | json }}\n  </pre>\n  </ion-item>\n  <ion-item>\n    <pre>{{ addressResult | json }}</pre>\n  </ion-item>\n  <ion-title>AddressInput (deprecated)</ion-title>\n  <form *ngIf="form" [formGroup]="form" novalidate>\n    <mv-address-input label="Address" formControlName="address"></mv-address-input>\n\n    {{form.value | mvCircularJson}}\n\n    <mv-errors-display target="address"></mv-errors-display>\n\n    <ion-item>\n      <button ion-button type="submit" [disabled]="!form.valid" (click)="onSubmit()">Submit</button>\n    </ion-item>\n  </form>\n</ion-content>'/*ion-inline-end:"/Users/Shared/projects/Moventes/Dev/Componentes/ionic-components/src/pages/address/address.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__angular_forms__["b" /* FormBuilder */]])
     ], AddressPage);
@@ -1181,7 +868,7 @@ var CounterPage = /** @class */ (function () {
     };
     CounterPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-counter',template:/*ion-inline-start:"/media/data/Projects/componentes/ionic-components-v2/src/pages/counter/counter.html"*/'<!--\n  Generated template for the CounterPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Counter</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <form #form="ngForm">\n    <ion-item>\n      <ion-label>example with templatedriven form</ion-label>\n    </ion-item>\n    <ion-item>\n      <p>ngModel value: {{ outerCounterValue }}</p>\n      <mv-counter-input name="counter" [(ngModel)]="outerCounterValue" counterRangeMax="10" counterRangeMin="0"></mv-counter-input>\n      <pre>{{ form.value | json }}</pre>\n    </ion-item>\n    <mv-errors-display></mv-errors-display>\n  </form>\n  <form [formGroup]="formGroup">\n    <ion-item>\n      <ion-label>example with modeldriven form</ion-label>\n    </ion-item>\n    <ion-item>\n      <mv-counter-input formControlName="counter" counterRangeMax="10" counterRangeMin="0"></mv-counter-input>\n      <pre>{{ formGroup.value | json }}</pre>\n    </ion-item>\n    <ion-item *ngIf="!formGroup.valid">\n      <p>\n        Counter is invalid! (for this example, validators are is in the formgroup AND in component decorator but you can choose only\n        one of them, error is dislayed in parent)\n      </p>\n    </ion-item>\n    <mv-errors-display></mv-errors-display>\n  </form>\n</ion-content>\n'/*ion-inline-end:"/media/data/Projects/componentes/ionic-components-v2/src/pages/counter/counter.html"*/,
+            selector: 'page-counter',template:/*ion-inline-start:"/Users/Shared/projects/Moventes/Dev/Componentes/ionic-components/src/pages/counter/counter.html"*/'<!--\n  Generated template for the CounterPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Counter</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <form #form="ngForm">\n    <ion-item>\n      <ion-label>example with templatedriven form</ion-label>\n    </ion-item>\n    <ion-item>\n      <p>ngModel value: {{ outerCounterValue }}</p>\n      <mv-counter-input name="counter" [(ngModel)]="outerCounterValue" counterRangeMax="10" counterRangeMin="0"></mv-counter-input>\n      <pre>{{ form.value | json }}</pre>\n    </ion-item>\n    <mv-errors-display></mv-errors-display>\n  </form>\n  <form [formGroup]="formGroup">\n    <ion-item>\n      <ion-label>example with modeldriven form</ion-label>\n    </ion-item>\n    <ion-item>\n      <mv-counter-input formControlName="counter" counterRangeMax="10" counterRangeMin="0"></mv-counter-input>\n      <pre>{{ formGroup.value | json }}</pre>\n    </ion-item>\n    <ion-item *ngIf="!formGroup.valid">\n      <p>\n        Counter is invalid! (for this example, validators are is in the formgroup AND in component decorator but you can choose only\n        one of them, error is dislayed in parent)\n      </p>\n    </ion-item>\n    <mv-errors-display></mv-errors-display>\n  </form>\n</ion-content>\n'/*ion-inline-end:"/Users/Shared/projects/Moventes/Dev/Componentes/ionic-components/src/pages/counter/counter.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */],
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */],
@@ -1358,7 +1045,7 @@ var PhonePage = /** @class */ (function () {
     };
     PhonePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-phone',template:/*ion-inline-start:"/media/data/Projects/componentes/ionic-components-v2/src/pages/phone/phone.html"*/'<ion-header>\n\n  <ion-navbar>\n    <ion-title>PhoneInput</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <form *ngIf="form" [formGroup]="form" novalidate>\n    <ion-item>\n      <ion-label text-wrap>{{\'Phone number\' | translate}}</ion-label>\n      <mv-phone-input item-content formControlName="phone"></mv-phone-input>\n    </ion-item>\n    <mv-errors-display target="phone"></mv-errors-display>\n\n    <pre>\n      {{form.value | json}}\n    </pre>\n    <ion-item>\n      <button ion-button type="submit" [disabled]="!form.valid" (click)="onSubmit()">Submit</button>\n    </ion-item>\n  </form>\n</ion-content>\n'/*ion-inline-end:"/media/data/Projects/componentes/ionic-components-v2/src/pages/phone/phone.html"*/,
+            selector: 'page-phone',template:/*ion-inline-start:"/Users/Shared/projects/Moventes/Dev/Componentes/ionic-components/src/pages/phone/phone.html"*/'<ion-header>\n\n  <ion-navbar>\n    <ion-title>PhoneInput</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <form *ngIf="form" [formGroup]="form" novalidate>\n    <ion-item>\n      <ion-label text-wrap>{{\'Phone number\' | translate}}</ion-label>\n      <mv-phone-input item-content formControlName="phone"></mv-phone-input>\n    </ion-item>\n    <mv-errors-display target="phone"></mv-errors-display>\n\n    <pre>\n      {{form.value | json}}\n    </pre>\n    <ion-item>\n      <button ion-button type="submit" [disabled]="!form.valid" (click)="onSubmit()">Submit</button>\n    </ion-item>\n  </form>\n</ion-content>\n'/*ion-inline-end:"/Users/Shared/projects/Moventes/Dev/Componentes/ionic-components/src/pages/phone/phone.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__angular_forms__["b" /* FormBuilder */]])
     ], PhonePage);
@@ -1432,7 +1119,7 @@ var RadioListPage = /** @class */ (function () {
     };
     RadioListPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'mv-radio-list-page',template:/*ion-inline-start:"/media/data/Projects/componentes/ionic-components-v2/src/pages/radio-list/radio-list.html"*/'<ion-header>\n    <ion-navbar>\n        <ion-title>\n            Radio List\n        </ion-title>\n    </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n\n    <ion-item>\n        <ion-label>TEMPLATE DRIVEN + OBSERVABLE</ion-label>\n    </ion-item>\n    <ion-item>\n        <ion-label>Choice number {{ observableSelected }} was selected, so the answer is {{ _results[observableSelected] }} </ion-label>\n    </ion-item>\n\n    <form #observableForm="ngForm">\n        <ion-item>\n            <mv-radio-list name="selected" [(ngModel)]="observableSelected" [values]="choices"></mv-radio-list>\n            <pre>{{ observableForm.value | json }}</pre>\n        </ion-item>\n    </form>\n\n    <ion-item>\n        <ion-label>TEMPLATE DRIVEN + ENUM</ion-label>\n    </ion-item>\n    <ion-item>\n        <ion-label>Choice {{ enumSelected }} was selected, so the answer is {{ enumOfChoices[enumSelected] }} </ion-label>\n    </ion-item>\n    <form #enumForm="ngForm">\n        <ion-item>\n            <mv-radio-list name="selected" [(ngModel)]="enumSelected" [values]="enumOfChoices" [enumName]="enumName"></mv-radio-list>\n            <pre>{{ enumForm.value | json }}</pre>\n        </ion-item>\n    </form>\n\n    <form [formGroup]="observableFormGroup">\n        <ion-item>\n            <ion-label>MODELDRIVEN + OBSERVABLE + ENUM.VALIDATOR</ion-label>\n        </ion-item>\n        <ion-item>\n            <mv-radio-list formControlName="selected" [values]="choices"></mv-radio-list>\n            <pre>{{ observableFormGroup.value | json }}</pre>\n        </ion-item>\n        <ion-label>errors should display here</ion-label>\n        <mv-errors-display target="selected"></mv-errors-display>\n        <ion-item>\n            <ion-label>\n                Choice number {{ observableFormGroup.value.selected }} was selected, so the answer is {{ _results[observableFormGroup.value.selected]\n                }}\n            </ion-label>\n        </ion-item>\n        <mv-errors-display></mv-errors-display>\n    </form>\n\n    <form [formGroup]="enumFormGroup">\n        <ion-item>\n            <ion-label>MODELDRIVEN + ENUM</ion-label>\n        </ion-item>\n        <ion-item>\n            <mv-radio-list formControlName="selected" [values]="enumOfChoices" [enumName]="enumName"></mv-radio-list>\n            <pre>{{ enumFormGroup.value | json }}</pre>\n        </ion-item>\n        <ion-item>\n            <ion-label>\n                Choice number {{ enumFormGroup.value.selected }} was selected, so the answer is {{ _results[enumFormGroup.value.selected]\n                }}\n            </ion-label>\n        </ion-item>\n    </form>\n\n</ion-content>\n'/*ion-inline-end:"/media/data/Projects/componentes/ionic-components-v2/src/pages/radio-list/radio-list.html"*/,
+            selector: 'mv-radio-list-page',template:/*ion-inline-start:"/Users/Shared/projects/Moventes/Dev/Componentes/ionic-components/src/pages/radio-list/radio-list.html"*/'<ion-header>\n    <ion-navbar>\n        <ion-title>\n            Radio List\n        </ion-title>\n    </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n\n    <ion-item>\n        <ion-label>TEMPLATE DRIVEN + OBSERVABLE</ion-label>\n    </ion-item>\n    <ion-item>\n        <ion-label>Choice number {{ observableSelected }} was selected, so the answer is {{ _results[observableSelected] }} </ion-label>\n    </ion-item>\n\n    <form #observableForm="ngForm">\n        <ion-item>\n            <mv-radio-list name="selected" [(ngModel)]="observableSelected" [values]="choices"></mv-radio-list>\n            <pre>{{ observableForm.value | json }}</pre>\n        </ion-item>\n    </form>\n\n    <ion-item>\n        <ion-label>TEMPLATE DRIVEN + ENUM</ion-label>\n    </ion-item>\n    <ion-item>\n        <ion-label>Choice {{ enumSelected }} was selected, so the answer is {{ enumOfChoices[enumSelected] }} </ion-label>\n    </ion-item>\n    <form #enumForm="ngForm">\n        <ion-item>\n            <mv-radio-list name="selected" [(ngModel)]="enumSelected" [values]="enumOfChoices" [enumName]="enumName"></mv-radio-list>\n            <pre>{{ enumForm.value | json }}</pre>\n        </ion-item>\n    </form>\n\n    <form [formGroup]="observableFormGroup">\n        <ion-item>\n            <ion-label>MODELDRIVEN + OBSERVABLE + ENUM.VALIDATOR</ion-label>\n        </ion-item>\n        <ion-item>\n            <mv-radio-list formControlName="selected" [values]="choices"></mv-radio-list>\n            <pre>{{ observableFormGroup.value | json }}</pre>\n        </ion-item>\n        <ion-label>errors should display here</ion-label>\n        <mv-errors-display target="selected"></mv-errors-display>\n        <ion-item>\n            <ion-label>\n                Choice number {{ observableFormGroup.value.selected }} was selected, so the answer is {{ _results[observableFormGroup.value.selected]\n                }}\n            </ion-label>\n        </ion-item>\n        <mv-errors-display></mv-errors-display>\n    </form>\n\n    <form [formGroup]="enumFormGroup">\n        <ion-item>\n            <ion-label>MODELDRIVEN + ENUM</ion-label>\n        </ion-item>\n        <ion-item>\n            <mv-radio-list formControlName="selected" [values]="enumOfChoices" [enumName]="enumName"></mv-radio-list>\n            <pre>{{ enumFormGroup.value | json }}</pre>\n        </ion-item>\n        <ion-item>\n            <ion-label>\n                Choice number {{ enumFormGroup.value.selected }} was selected, so the answer is {{ _results[enumFormGroup.value.selected]\n                }}\n            </ion-label>\n        </ion-item>\n    </form>\n\n</ion-content>\n'/*ion-inline-end:"/Users/Shared/projects/Moventes/Dev/Componentes/ionic-components/src/pages/radio-list/radio-list.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */],
             __WEBPACK_IMPORTED_MODULE_2__angular_forms__["b" /* FormBuilder */]])
@@ -1540,7 +1227,7 @@ var YesNoListPage = /** @class */ (function () {
     };
     YesNoListPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-yes-no-list',template:/*ion-inline-start:"/media/data/Projects/componentes/ionic-components-v2/src/pages/yes-no-list/yes-no-list.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>Yes No List</ion-title>\n  </ion-navbar>\n</ion-header>\n\n\n<ion-content padding>\n  <form name="templateForm" class="full-height">\n    <mv-yes-no-list [(ngModel)]="answers" [question]="question" [itemsList]="itemsList" name="answers" [callback]="callback"></mv-yes-no-list>\n  </form>\n</ion-content>\n'/*ion-inline-end:"/media/data/Projects/componentes/ionic-components-v2/src/pages/yes-no-list/yes-no-list.html"*/
+            selector: 'page-yes-no-list',template:/*ion-inline-start:"/Users/Shared/projects/Moventes/Dev/Componentes/ionic-components/src/pages/yes-no-list/yes-no-list.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>Yes No List</ion-title>\n  </ion-navbar>\n</ion-header>\n\n\n<ion-content padding>\n  <form name="templateForm" class="full-height">\n    <mv-yes-no-list [(ngModel)]="answers" [question]="question" [itemsList]="itemsList" name="answers" [callback]="callback"></mv-yes-no-list>\n  </form>\n</ion-content>\n'/*ion-inline-end:"/Users/Shared/projects/Moventes/Dev/Componentes/ionic-components/src/pages/yes-no-list/yes-no-list.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */],
             __WEBPACK_IMPORTED_MODULE_2__angular_forms__["b" /* FormBuilder */],
@@ -1597,7 +1284,7 @@ var IteratorPipePage = /** @class */ (function () {
     }
     IteratorPipePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["m" /* Component */])({
-            selector: 'page-iterator-pipe',template:/*ion-inline-start:"/media/data/Projects/componentes/ionic-components-v2/src/pages/iterator-pipe/iterator-pipe.html"*/'<ion-header>\n\n  <ion-navbar>\n    <ion-title>iterator-pipe</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <form [formGroup]="formGroup">\n    <ion-item>Model driven, list = enum, constructed with pipe</ion-item>\n    <ion-list radio-group formControlName="selectedInEnum">\n      <ion-item *ngFor="let element of enum | mvIterator">\n        <ion-label>{{ element.value }}</ion-label>\n        <ion-radio value="{{element.key}}"></ion-radio>\n      </ion-item>\n    </ion-list>\n    <ion-item>\n      <ion-label>\n        selectedInEnum = {{ formGroup.get(\'selectedInEnum\').value | translate }}\n      </ion-label>\n    </ion-item>\n    <ion-item>Model driven, list = obs, constructed with pipe</ion-item>\n    <ion-list radio-group formControlName="selectedInObs">\n      <ion-item *ngFor="let element of observable | mvIterator">\n        <ion-label>{{ element }}</ion-label>\n        <ion-radio value="{{element}}"></ion-radio>\n      </ion-item>\n    </ion-list>\n    <ion-item>\n      <ion-label>\n        selectedInObs = {{ formGroup.get(\'selectedInObs\').value | translate }}\n      </ion-label>\n    </ion-item>\n  </form>\n</ion-content>\n'/*ion-inline-end:"/media/data/Projects/componentes/ionic-components-v2/src/pages/iterator-pipe/iterator-pipe.html"*/,
+            selector: 'page-iterator-pipe',template:/*ion-inline-start:"/Users/Shared/projects/Moventes/Dev/Componentes/ionic-components/src/pages/iterator-pipe/iterator-pipe.html"*/'<ion-header>\n\n  <ion-navbar>\n    <ion-title>iterator-pipe</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <form [formGroup]="formGroup">\n    <ion-item>Model driven, list = enum, constructed with pipe</ion-item>\n    <ion-list radio-group formControlName="selectedInEnum">\n      <ion-item *ngFor="let element of enum | mvIterator">\n        <ion-label>{{ element.value }}</ion-label>\n        <ion-radio value="{{element.key}}"></ion-radio>\n      </ion-item>\n    </ion-list>\n    <ion-item>\n      <ion-label>\n        selectedInEnum = {{ formGroup.get(\'selectedInEnum\').value | translate }}\n      </ion-label>\n    </ion-item>\n    <ion-item>Model driven, list = obs, constructed with pipe</ion-item>\n    <ion-list radio-group formControlName="selectedInObs">\n      <ion-item *ngFor="let element of observable | mvIterator">\n        <ion-label>{{ element }}</ion-label>\n        <ion-radio value="{{element}}"></ion-radio>\n      </ion-item>\n    </ion-list>\n    <ion-item>\n      <ion-label>\n        selectedInObs = {{ formGroup.get(\'selectedInObs\').value | translate }}\n      </ion-label>\n    </ion-item>\n  </form>\n</ion-content>\n'/*ion-inline-end:"/Users/Shared/projects/Moventes/Dev/Componentes/ionic-components/src/pages/iterator-pipe/iterator-pipe.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0__angular_forms__["b" /* FormBuilder */], __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["f" /* NavController */]])
     ], IteratorPipePage);
@@ -1675,7 +1362,7 @@ var AutocompletePage = /** @class */ (function () {
     ], AutocompletePage.prototype, "autocomplete2", void 0);
     AutocompletePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-autocomplete',template:/*ion-inline-start:"/media/data/Projects/componentes/ionic-components-v2/src/pages/autocomplete/autocomplete.html"*/'<ion-header>\n\n  <ion-navbar>\n    <ion-title>autocomplete</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <ion-item>\n    <mv-autocomplete id="autocomplete-1" label="Custom item allowed" [(ngModel)]="itemCustom" [display]="displayFunction" [filter]="filterFunction"\n      [factory]="factoryFunction" [list]="list" [allowCustom]="true"></mv-autocomplete>\n    <pre>\n    {{ itemCustom | json }}\n  </pre>\n    <mv-autocomplete id="autocomplete-2" label="Custom item disabled" [(ngModel)]="itemNoCustom" [display]="displayFunction"\n      [filter]="filterFunction" [list]="list" [allowCustom]="false"></mv-autocomplete>\n    <pre>\n    {{ itemNoCustom | json }}\n  </pre>\n  </ion-item>\n</ion-content>'/*ion-inline-end:"/media/data/Projects/componentes/ionic-components-v2/src/pages/autocomplete/autocomplete.html"*/,
+            selector: 'page-autocomplete',template:/*ion-inline-start:"/Users/Shared/projects/Moventes/Dev/Componentes/ionic-components/src/pages/autocomplete/autocomplete.html"*/'<ion-header>\n\n  <ion-navbar>\n    <ion-title>autocomplete</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <ion-item>\n    <mv-autocomplete id="autocomplete-1" label="Custom item allowed" [(ngModel)]="itemCustom" [display]="displayFunction" [filter]="filterFunction"\n      [factory]="factoryFunction" [list]="list" [allowCustom]="true"></mv-autocomplete>\n    <pre>\n    {{ itemCustom | json }}\n  </pre>\n    <mv-autocomplete id="autocomplete-2" label="Custom item disabled" [(ngModel)]="itemNoCustom" [display]="displayFunction"\n      [filter]="filterFunction" [list]="list" [allowCustom]="false"></mv-autocomplete>\n    <pre>\n    {{ itemNoCustom | json }}\n  </pre>\n  </ion-item>\n</ion-content>'/*ion-inline-end:"/Users/Shared/projects/Moventes/Dev/Componentes/ionic-components/src/pages/autocomplete/autocomplete.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
     ], AutocompletePage);
@@ -1709,7 +1396,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 /**
- * Component providing a searchbar input which autocomplete returned by Google Maps API
+ * Component providing a searchbar input with autocomplete
  *
  * @example
  * //TODO
@@ -1717,6 +1404,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var AutocompleteComponent = /** @class */ (function () {
     function AutocompleteComponent(modalCtrl) {
         this.modalCtrl = modalCtrl;
+        this.isModalPresented = false;
         /**
          * Container for the propagation function.
          */
@@ -1739,25 +1427,28 @@ var AutocompleteComponent = /** @class */ (function () {
      */
     AutocompleteComponent.prototype.openModal = function () {
         var _this = this;
-        console.log(this.allowCustom);
-        var autocompleteModal = this.modalCtrl.create(__WEBPACK_IMPORTED_MODULE_3__autocomplete_modal__["a" /* AutocompleteModalComponent */], {
-            label: this.label,
-            list: this.list,
-            allowCustom: this.allowCustom,
-            display: this.display,
-            filter: this.filter,
-            factory: this.factory
-        });
-        autocompleteModal.onDidDismiss(function (newItem) {
-            if (newItem) {
-                _this.itemValue = newItem;
-                _this.value = _this.removeTags(_this.display(_this.itemValue));
-            }
-            else {
-                // do nothing
-            }
-        });
-        autocompleteModal.present();
+        if (!this.isModalPresented) {
+            var autocompleteModal = this.modalCtrl.create(__WEBPACK_IMPORTED_MODULE_3__autocomplete_modal__["a" /* AutocompleteModalComponent */], {
+                label: this.label,
+                list: this.list,
+                allowCustom: this.allowCustom,
+                display: this.display,
+                filter: this.filter,
+                factory: this.factory
+            });
+            autocompleteModal.onDidDismiss(function (newItem) {
+                if (newItem) {
+                    _this.itemValue = newItem;
+                    _this.value = _this.removeTags(_this.display(_this.itemValue));
+                }
+                else {
+                    // do nothing
+                }
+                _this.isModalPresented = false;
+            });
+            autocompleteModal.present();
+            this.isModalPresented = true;
+        }
     };
     /**
      * This method is part of ControlValueAccessor interface.
@@ -1816,7 +1507,7 @@ var AutocompleteComponent = /** @class */ (function () {
     ], AutocompleteComponent.prototype, "list", void 0);
     AutocompleteComponent = AutocompleteComponent_1 = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'mv-autocomplete',template:/*ion-inline-start:"/media/data/Projects/componentes/ionic-components-v2/componentes/src/components/autocomplete/autocomplete.html"*/'<ion-item>\n  <ion-label>{{ label }}</ion-label>\n  <ion-input type="text" [(ngModel)]="value" (click)="openModal()"></ion-input>\n</ion-item>'/*ion-inline-end:"/media/data/Projects/componentes/ionic-components-v2/componentes/src/components/autocomplete/autocomplete.html"*/,
+            selector: 'mv-autocomplete',template:/*ion-inline-start:"/Users/Shared/projects/Moventes/Dev/Componentes/ionic-components/componentes/src/components/autocomplete/autocomplete.html"*/'<ion-item>\n  <ion-label>{{ label }}</ion-label>\n  <ion-input type="text" [(ngModel)]="value" (focus)="openModal()"></ion-input>\n</ion-item>\n'/*ion-inline-end:"/Users/Shared/projects/Moventes/Dev/Componentes/ionic-components/componentes/src/components/autocomplete/autocomplete.html"*/,
             providers: [
                 {
                     provide: __WEBPACK_IMPORTED_MODULE_1__angular_forms__["f" /* NG_VALUE_ACCESSOR */],
@@ -2427,7 +2118,7 @@ var MyApp = /** @class */ (function () {
         });
     }
     MyApp = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"/media/data/Projects/componentes/ionic-components-v2/src/app/app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n'/*ion-inline-end:"/media/data/Projects/componentes/ionic-components-v2/src/app/app.html"*/
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"/Users/Shared/projects/Moventes/Dev/Componentes/ionic-components/src/app/app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n'/*ion-inline-end:"/Users/Shared/projects/Moventes/Dev/Componentes/ionic-components/src/app/app.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* Platform */],
             __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */],
@@ -2593,6 +2284,7 @@ var AddressAutocompleteComponent = /** @class */ (function () {
     function AddressAutocompleteComponent(modalCtrl, ngZone) {
         this.modalCtrl = modalCtrl;
         this.ngZone = ngZone;
+        this.isModalPresented = false;
         /**
          * Container for the propagation function.
          */
@@ -2613,25 +2305,27 @@ var AddressAutocompleteComponent = /** @class */ (function () {
         enumerable: true,
         configurable: true
     });
-    AddressAutocompleteComponent.prototype.ngOnInit = function () {
-        console.log(this.fullAddressDetails);
-    };
     /**
      * Open a modal with searchbar and results list.
      */
     AddressAutocompleteComponent.prototype.openModal = function () {
         var _this = this;
-        var addressAutocompleteModal = this.modalCtrl.create(__WEBPACK_IMPORTED_MODULE_3__address_autocomplete_modal__["a" /* AddressAutocompleteModalComponent */], {
-            label: this.label,
-            allowCustom: this.allowCustom,
-            fullAddressDetails: this.fullAddressDetails
-        });
-        addressAutocompleteModal.onDidDismiss(function (newAddress) {
-            if (newAddress && newAddress.formattedAddress) {
-                _this.addressValue = newAddress;
-            }
-        });
-        addressAutocompleteModal.present();
+        console.log('openModal');
+        if (!this.isModalPresented) {
+            var addressAutocompleteModal = this.modalCtrl.create(__WEBPACK_IMPORTED_MODULE_3__address_autocomplete_modal__["a" /* AddressAutocompleteModalComponent */], {
+                label: this.label,
+                allowCustom: this.allowCustom,
+                fullAddressDetails: this.fullAddressDetails
+            });
+            addressAutocompleteModal.onDidDismiss(function (newAddress) {
+                if (newAddress && newAddress.formattedAddress) {
+                    _this.addressValue = newAddress;
+                }
+                _this.isModalPresented = false;
+            });
+            addressAutocompleteModal.present();
+            this.isModalPresented = true;
+        }
     };
     /**
      * This method is part of ControlValueAccessor interface.
@@ -2640,7 +2334,6 @@ var AddressAutocompleteComponent = /** @class */ (function () {
      * @param value Value given from the model
      */
     AddressAutocompleteComponent.prototype.writeValue = function (value) {
-        console.log('writeValue =>', value);
         if (value) {
             this.addressValue = value;
         }
@@ -2678,7 +2371,7 @@ var AddressAutocompleteComponent = /** @class */ (function () {
     ], AddressAutocompleteComponent.prototype, "fullAddressDetails", void 0);
     AddressAutocompleteComponent = AddressAutocompleteComponent_1 = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'mv-address-autocomplete',template:/*ion-inline-start:"/media/data/Projects/componentes/ionic-components-v2/componentes/src/components/address-autocomplete/address-autocomplete.html"*/'<ion-item>\n  <ion-label>{{ label }}</ion-label>\n  <ion-input type="text" [(ngModel)]="addressValue.formattedAddress" (click)="openModal()"></ion-input>\n</ion-item>'/*ion-inline-end:"/media/data/Projects/componentes/ionic-components-v2/componentes/src/components/address-autocomplete/address-autocomplete.html"*/,
+            selector: 'mv-address-autocomplete',template:/*ion-inline-start:"/Users/Shared/projects/Moventes/Dev/Componentes/ionic-components/componentes/src/components/address-autocomplete/address-autocomplete.html"*/'<ion-item>\n  <ion-label>{{ label }}</ion-label>\n  <ion-input type="text" [(ngModel)]="addressValue.formattedAddress" (focus)="openModal()"></ion-input>\n</ion-item>\n'/*ion-inline-end:"/Users/Shared/projects/Moventes/Dev/Componentes/ionic-components/componentes/src/components/address-autocomplete/address-autocomplete.html"*/,
             providers: [
                 {
                     provide: __WEBPACK_IMPORTED_MODULE_1__angular_forms__["f" /* NG_VALUE_ACCESSOR */],
@@ -2939,7 +2632,7 @@ var AddressInputComponent = /** @class */ (function () {
     ], AddressInputComponent.prototype, "label", void 0);
     AddressInputComponent = AddressInputComponent_1 = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["m" /* Component */])({
-            selector: 'mv-address-input',template:/*ion-inline-start:"/media/data/Projects/componentes/ionic-components-v2/componentes/src/components/address-input/address-input.html"*/'<ion-item>\n  <ion-searchbar type="text" id="search" [(ngModel)]="displayedAddressValue" (ionInput)="inputOnSearchbar()" (ionFocus)="inputOnSearchbar()"\n    (ionBlur)="onBlur()" [placeholder]="label"></ion-searchbar>\n</ion-item>\n<ion-item *ngIf="results.length > 0">\n  <ion-list>\n    <ion-item text-wrap *ngFor="let item of results" tappable (click)="selectSearchResult(item)">\n      {{ item.description || item.formatted_address }}\n    </ion-item>\n  </ion-list>\n</ion-item>\n<!-- some html element is needed by maps API to "display" attribution when no maps is generated -->\n<p id="attribution"></p>\n'/*ion-inline-end:"/media/data/Projects/componentes/ionic-components-v2/componentes/src/components/address-input/address-input.html"*/,
+            selector: 'mv-address-input',template:/*ion-inline-start:"/Users/Shared/projects/Moventes/Dev/Componentes/ionic-components/componentes/src/components/address-input/address-input.html"*/'<ion-item>\n  <ion-searchbar type="text" id="search" [(ngModel)]="displayedAddressValue" (ionInput)="inputOnSearchbar()" (ionFocus)="inputOnSearchbar()"\n    (ionBlur)="onBlur()" [placeholder]="label"></ion-searchbar>\n</ion-item>\n<ion-item *ngIf="results.length > 0">\n  <ion-list>\n    <ion-item text-wrap *ngFor="let item of results" tappable (click)="selectSearchResult(item)">\n      {{ item.description || item.formatted_address }}\n    </ion-item>\n  </ion-list>\n</ion-item>\n<!-- some html element is needed by maps API to "display" attribution when no maps is generated -->\n<p id="attribution"></p>\n'/*ion-inline-end:"/Users/Shared/projects/Moventes/Dev/Componentes/ionic-components/componentes/src/components/address-input/address-input.html"*/,
             providers: [
                 {
                     provide: __WEBPACK_IMPORTED_MODULE_0__angular_forms__["f" /* NG_VALUE_ACCESSOR */],
@@ -3065,7 +2758,7 @@ var ElementOfArrayComponent = /** @class */ (function () {
     ], ElementOfArrayComponent.prototype, "index", void 0);
     ElementOfArrayComponent = ElementOfArrayComponent_1 = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'mv-element-of-array',template:/*ion-inline-start:"/media/data/Projects/componentes/ionic-components-v2/componentes/src/components/element-of-array/element-of-array.html"*/'<ion-input type="text" [(ngModel)]="displayedElementValue"></ion-input>\n'/*ion-inline-end:"/media/data/Projects/componentes/ionic-components-v2/componentes/src/components/element-of-array/element-of-array.html"*/,
+            selector: 'mv-element-of-array',template:/*ion-inline-start:"/Users/Shared/projects/Moventes/Dev/Componentes/ionic-components/componentes/src/components/element-of-array/element-of-array.html"*/'<ion-input type="text" [(ngModel)]="displayedElementValue"></ion-input>\n'/*ion-inline-end:"/Users/Shared/projects/Moventes/Dev/Componentes/ionic-components/componentes/src/components/element-of-array/element-of-array.html"*/,
             providers: [
                 {
                     provide: __WEBPACK_IMPORTED_MODULE_1__angular_forms__["f" /* NG_VALUE_ACCESSOR */],
@@ -3153,7 +2846,7 @@ var ErrorsDisplayComponent = /** @class */ (function () {
     ], ErrorsDisplayComponent.prototype, "target", void 0);
     ErrorsDisplayComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'mv-errors-display',template:/*ion-inline-start:"/media/data/Projects/componentes/ionic-components-v2/componentes/src/components/errors-display/errors-display.html"*/'<ion-item *ngIf="errors.keys && errors.keys.length">\n  <h3 ion-text color="danger" *ngIf="!target">{{\'There are errors\' | translate}}</h3>\n  <div *ngFor="let labelKey of errors.keys">\n    <h4 ion-text color="danger" *ngIf="!target">{{ labelKey | translate }}</h4>\n    <div *ngFor="let errorKey of errors[labelKey].keys">\n      <p ion-text color="danger" *ngIf="errorKey != \'keys\'">{{ \'error.\'+ labelKey + \'.\' + errorKey | uppercase | translate }}</p>\n    </div>\n  </div>\n</ion-item>\n'/*ion-inline-end:"/media/data/Projects/componentes/ionic-components-v2/componentes/src/components/errors-display/errors-display.html"*/
+            selector: 'mv-errors-display',template:/*ion-inline-start:"/Users/Shared/projects/Moventes/Dev/Componentes/ionic-components/componentes/src/components/errors-display/errors-display.html"*/'<ion-item *ngIf="errors.keys && errors.keys.length">\n  <h3 ion-text color="danger" *ngIf="!target">{{\'There are errors\' | translate}}</h3>\n  <div *ngFor="let labelKey of errors.keys">\n    <h4 ion-text color="danger" *ngIf="!target">{{ labelKey | translate }}</h4>\n    <div *ngFor="let errorKey of errors[labelKey].keys">\n      <p ion-text color="danger" *ngIf="errorKey != \'keys\'">{{ \'error.\'+ labelKey + \'.\' + errorKey | uppercase | translate }}</p>\n    </div>\n  </div>\n</ion-item>\n'/*ion-inline-end:"/Users/Shared/projects/Moventes/Dev/Componentes/ionic-components/componentes/src/components/errors-display/errors-display.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_forms__["a" /* ControlContainer */]])
     ], ErrorsDisplayComponent);
@@ -3283,7 +2976,7 @@ var PhoneInputComponent = /** @class */ (function () {
     ], PhoneInputComponent.prototype, "label", void 0);
     PhoneInputComponent = PhoneInputComponent_1 = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'mv-phone-input',template:/*ion-inline-start:"/media/data/Projects/componentes/ionic-components-v2/componentes/src/components/phone-input/phone-input.html"*/'<ion-input type="tel" [(ngModel)]="displayedPhoneValue"></ion-input>\n'/*ion-inline-end:"/media/data/Projects/componentes/ionic-components-v2/componentes/src/components/phone-input/phone-input.html"*/,
+            selector: 'mv-phone-input',template:/*ion-inline-start:"/Users/Shared/projects/Moventes/Dev/Componentes/ionic-components/componentes/src/components/phone-input/phone-input.html"*/'<ion-input type="tel" [(ngModel)]="displayedPhoneValue"></ion-input>\n'/*ion-inline-end:"/Users/Shared/projects/Moventes/Dev/Componentes/ionic-components/componentes/src/components/phone-input/phone-input.html"*/,
             providers: [
                 {
                     provide: __WEBPACK_IMPORTED_MODULE_1__angular_forms__["f" /* NG_VALUE_ACCESSOR */],
@@ -3432,7 +3125,7 @@ var RadioListComponent = /** @class */ (function () {
         __metadata("design:type", String)
     ], RadioListComponent.prototype, "enumName", void 0);
     RadioListComponent = RadioListComponent_1 = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"/media/data/Projects/componentes/ionic-components-v2/componentes/src/components/radio-list/radio-list.html"*/'<ion-list radio-group [(ngModel)]="selected">\n    <ion-item *ngFor="let value of _currentValues; index as i">\n        <ion-label>{{ enum ? enumOfChoices[_currentValues[i]] : value | translate }}</ion-label>\n        <ion-radio value={{i}}></ion-radio>\n    </ion-item>\n</ion-list>\n'/*ion-inline-end:"/media/data/Projects/componentes/ionic-components-v2/componentes/src/components/radio-list/radio-list.html"*/,
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"/Users/Shared/projects/Moventes/Dev/Componentes/ionic-components/componentes/src/components/radio-list/radio-list.html"*/'<ion-list radio-group [(ngModel)]="selected">\n    <ion-item *ngFor="let value of _currentValues; index as i">\n        <ion-label>{{ enum ? enumOfChoices[_currentValues[i]] : value | translate }}</ion-label>\n        <ion-radio value={{i}}></ion-radio>\n    </ion-item>\n</ion-list>\n'/*ion-inline-end:"/Users/Shared/projects/Moventes/Dev/Componentes/ionic-components/componentes/src/components/radio-list/radio-list.html"*/,
             selector: 'mv-radio-list',
             providers: [
                 // tells Angular that this component can be instantiate to be used as a control value accessor
@@ -3633,7 +3326,7 @@ var YesNoListComponent = /** @class */ (function () {
     ], YesNoListComponent.prototype, "itemsList", null);
     YesNoListComponent = YesNoListComponent_1 = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["m" /* Component */])({
-            selector: 'mv-yes-no-list',template:/*ion-inline-start:"/media/data/Projects/componentes/ionic-components-v2/componentes/src/components/yes-no-list/yes-no-list.html"*/'<div class="full-height flex-vertical justify-between">\n  <div class="progress-bar full-width">\n    <div [style.width]="progress" class="progress"></div>\n  </div>\n  <h1 ion-text color="primary" text-center text-wrap>{{ question | translate }}</h1>\n  <h2 text-center>{{ sortedItemsList[currentItem].title | translate }}</h2>\n  <div class="flex-horizontal height-15">\n    <div class="half-width">\n      <div ion-button full large color="danger" class="full-height" (click)="answerNo()">\n        <ion-icon name="thumbs-down" class="font-5"></ion-icon>\n      </div>\n    </div>\n    <div class="half-width">\n      <div ion-button full large color="secondary" class="full-height" (click)="answerYes()">\n        <ion-icon name="thumbs-up" class="font-5"></ion-icon>\n      </div>\n    </div>\n  </div>\n</div>\n'/*ion-inline-end:"/media/data/Projects/componentes/ionic-components-v2/componentes/src/components/yes-no-list/yes-no-list.html"*/,
+            selector: 'mv-yes-no-list',template:/*ion-inline-start:"/Users/Shared/projects/Moventes/Dev/Componentes/ionic-components/componentes/src/components/yes-no-list/yes-no-list.html"*/'<div class="full-height flex-vertical justify-between">\n  <div class="progress-bar full-width">\n    <div [style.width]="progress" class="progress"></div>\n  </div>\n  <h1 ion-text color="primary" text-center text-wrap>{{ question | translate }}</h1>\n  <h2 text-center>{{ sortedItemsList[currentItem].title | translate }}</h2>\n  <div class="flex-horizontal height-15">\n    <div class="half-width">\n      <div ion-button full large color="danger" class="full-height" (click)="answerNo()">\n        <ion-icon name="thumbs-down" class="font-5"></ion-icon>\n      </div>\n    </div>\n    <div class="half-width">\n      <div ion-button full large color="secondary" class="full-height" (click)="answerYes()">\n        <ion-icon name="thumbs-up" class="font-5"></ion-icon>\n      </div>\n    </div>\n  </div>\n</div>\n'/*ion-inline-end:"/Users/Shared/projects/Moventes/Dev/Componentes/ionic-components/componentes/src/components/yes-no-list/yes-no-list.html"*/,
             providers: [
                 {
                     provide: __WEBPACK_IMPORTED_MODULE_0__angular_forms__["f" /* NG_VALUE_ACCESSOR */],
