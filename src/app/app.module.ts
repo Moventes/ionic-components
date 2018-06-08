@@ -19,6 +19,8 @@ import { RadioListPage } from '../pages/radio-list/radio-list';
 import { YesNoListPage } from '../pages/yes-no-list/yes-no-list';
 
 import { ComponentsIonicModule, AddressAutocompleteModalComponent } from '../../componentes/src/componentes.module';
+import { AutocompletePage } from '../pages/autocomplete/autocomplete';
+import { AutocompleteModalComponent } from '../../componentes/src/components/autocomplete/autocomplete-modal';
 
 
 export function promptParse(message) {
@@ -50,6 +52,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     MyApp,
     HomePage,
     AddressPage,
+    AutocompletePage,
     CounterPage,
     PhonePage,
     RadioListPage,
@@ -77,12 +80,14 @@ export function HttpLoaderFactory(http: HttpClient) {
     MyApp,
     HomePage,
     AddressPage,
+    AutocompletePage,
     CounterPage,
     PhonePage,
     RadioListPage,
     YesNoListPage,
     IteratorPipePage,
-    AddressAutocompleteModalComponent
+    AddressAutocompleteModalComponent,
+    AutocompleteModalComponent
   ],
   providers: [
     StatusBar,

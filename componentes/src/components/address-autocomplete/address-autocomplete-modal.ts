@@ -26,13 +26,17 @@ declare var google: any;
   ]
 })
 export class AddressAutocompleteModalComponent implements ControlValueAccessor {
-
   @ViewChild('search') searchBar: Searchbar;
+
+  /**
+   * Boolean that indicates if the "custom address he typed could be presented on the list"
+   */
+  allowCustom: boolean;
 
   /**
    * Boolean that indicates if user can validate the "custom address he typed or not"
    */
-  customEnabled;
+  customEnabled: boolean;
 
   /**
    * The component needs a label option to fill the placeholder
@@ -108,6 +112,7 @@ export class AddressAutocompleteModalComponent implements ControlValueAccessor {
 
   ionViewDidEnter() {
     this.label = this.params.get('label');
+    this.allowCustom = this.params.get('allowCustom');
     this.customEnabled = false;
     this.fullAddressDetails = this.params.get('fullAddressDetails');
     setTimeout(() => {

@@ -7,6 +7,7 @@ import { PhonePage } from '../phone/phone';
 import { RadioListPage } from '../radio-list/radio-list';
 import { YesNoListPage } from './../yes-no-list/yes-no-list';
 import { IteratorPipePage } from '../iterator-pipe/iterator-pipe';
+import { AutocompletePage } from '../autocomplete/autocomplete';
 
 @Component({
   selector: 'page-home',
@@ -41,4 +42,9 @@ export class HomePage {
   goToIteratorPipePage() {
     this.navCtrl.push(IteratorPipePage);
   }
+
+  goToAutocompletePage(): void {
+    this.navCtrl.push(AutocompletePage);
+  }
+
 }

@@ -1,0 +1,23 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>autocomplete</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-item>
+    <mv-autocomplete id="autocomplete-1" label="Custom item allowed" [(ngModel)]="itemCustom" [display]="displayFunction" [filter]="filterFunction"
+      [factory]="factoryFunction" [list]="list" [allowCustom]="true"></mv-autocomplete>
+    <pre>
+    {{ itemCustom | json }}
+  </pre>
+    <mv-autocomplete id="autocomplete-2" label="Custom item disabled" [(ngModel)]="itemNoCustom" [display]="displayFunction"
+      [filter]="filterFunction" [list]="list" [allowCustom]="false"></mv-autocomplete>
+    <pre>
+    {{ itemNoCustom | json }}
+  </pre>
+  </ion-item>
+</ion-content>

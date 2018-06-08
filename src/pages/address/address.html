@@ -10,11 +10,11 @@
 <ion-content padding>
   <ion-title>AddressAutocomplete</ion-title>
   <ion-item>
-    <mv-address-autocomplete label="Adress full" fullAddressDetails="true" [(ngModel)]="addressFull"></mv-address-autocomplete>
+    <mv-address-autocomplete label="Adress full" [fullAddressDetails]="true" [(ngModel)]="addressFull" [allowCustom]="true"></mv-address-autocomplete>
     <pre>
     {{ addressFull | json }}
   </pre>
-    <mv-address-autocomplete label="Adress lite" [(ngModel)]="addressLite"></mv-address-autocomplete>
+    <mv-address-autocomplete label="Adress lite" [fullAddressDetails]="false" [(ngModel)]="addressLite" [allowCustom]="true"></mv-address-autocomplete>
     <pre>
     {{ addressLite | json }}
   </pre>

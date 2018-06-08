@@ -2,9 +2,13 @@ import { NgModule } from '@angular/core';
 import { IonicModule } from 'ionic-angular';
 import { TranslateModule } from '@ngx-translate/core';
 
+import { ComponentsCommonModule } from 'mv-common-components';
+
 import { AddressAutocompleteComponent } from './components/address-autocomplete/address-autocomplete';
 import { AddressAutocompleteModalComponent } from './components/address-autocomplete/address-autocomplete-modal';
 import { AddressInputComponent } from './components/address-input/address-input';
+import { AutocompleteComponent } from './components/autocomplete/autocomplete';
+import { AutocompleteModalComponent } from './components/autocomplete/autocomplete-modal';
 import { CounterInputComponent } from './components/counter-input/counter-input';
 import { ElementOfArrayComponent } from './components/element-of-array/element-of-array';
 import { ErrorsDisplayComponent } from './components/errors-display/errors-display';
@@ -30,6 +34,8 @@ export * from './components/address-autocomplete/address-autocomplete-modal';
     AddressAutocompleteComponent,
     AddressAutocompleteModalComponent,
     AddressInputComponent,
+    AutocompleteComponent,
+    AutocompleteModalComponent,
     CounterInputComponent,
     ElementOfArrayComponent,
     ErrorsDisplayComponent,
@@ -47,11 +53,14 @@ export * from './components/address-autocomplete/address-autocomplete-modal';
     // IonicModule.forRoot(RadioListComponent),
     // IonicModule.forRoot(YesNoListComponent),
     TranslateModule,
+    ComponentsCommonModule
   ],
   exports: [
     AddressAutocompleteComponent,
     AddressAutocompleteModalComponent,
     AddressInputComponent,
+    AutocompleteComponent,
+    AutocompleteModalComponent,
     CounterInputComponent,
     ElementOfArrayComponent,
     ErrorsDisplayComponent,

@@ -1,5 +1,5 @@
 
-import { Component, forwardRef, Input, NgZone, OnInit } from '@angular/core';
+import { Component, forwardRef, Input, NgZone } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 import { ModalController } from 'ionic-angular';
 import { Address } from 'mv-common-components';
@@ -24,12 +24,18 @@ import { AddressAutocompleteModalComponent } from './address-autocomplete-modal'
     }
   ]
 })
-export class AddressAutocompleteComponent implements ControlValueAccessor, OnInit {
+export class AddressAutocompleteComponent implements ControlValueAccessor {
   /**
    * The component needs a label option to fill the placeholder
    */
   @Input()
   label: string;
+
+  /**
+   * Boolean that indicates if the component will accept custom value or not.
+   */
+  @Input()
+  allowCustom: boolean;
 
   /**
    * Boolean that indicates if the component will return the full detailed address or not.
@@ -60,10 +66,6 @@ export class AddressAutocompleteComponent implements ControlValueAccessor, OnIni
     private ngZone: NgZone
   ) { }
 
-  ngOnInit(): void {
-    console.log(this.fullAddressDetails);
-  }
-
   /**
    * Open a modal with searchbar and results list.
    */
@@ -72,6 +74,7 @@ export class AddressAutocompleteComponent implements ControlValueAccessor, OnIni
     if (!this.isModalPresented) {
       const addressAutocompleteModal = this.modalCtrl.create(AddressAutocompleteModalComponent, {
         label: this.label,
+        allowCustom: this.allowCustom,
         fullAddressDetails: this.fullAddressDetails
       });
       addressAutocompleteModal.onDidDismiss((newAddress: Address) => {
@@ -92,7 +95,6 @@ export class AddressAutocompleteComponent implements ControlValueAccessor, OnIni
    * @param value Value given from the model
    */
   public writeValue(value: any) {
-    console.log('writeValue =>', value);
     if (value) {
       this.addressValue = value;
     } else {
