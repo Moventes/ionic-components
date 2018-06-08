@@ -1,11 +1,11 @@
 
-import { Component, forwardRef, OnInit, Input, NgZone } from '@angular/core';
-import { NG_VALUE_ACCESSOR, ControlValueAccessor } from '@angular/forms';
+import { Component, forwardRef, Input, NgZone, OnInit } from '@angular/core';
+import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 import { ModalController } from 'ionic-angular';
-
 import { Address } from 'mv-common-components';
-
 import { AddressAutocompleteModalComponent } from './address-autocomplete-modal';
+
+
 
 /**
  * Component providing a searchbar input which autocomplete returned by Google Maps API
@@ -42,6 +42,8 @@ export class AddressAutocompleteComponent implements ControlValueAccessor, OnIni
    */
   private _addressValue: Address;
 
+  private isModalPresented = false;
+
   private get addressValue(): Address {
     return this._addressValue;
   }
@@ -66,16 +68,21 @@ export class AddressAutocompleteComponent implements ControlValueAccessor, OnIni
    * Open a modal with searchbar and results list.
    */
   public openModal() {
-    const addressAutocompleteModal = this.modalCtrl.create(AddressAutocompleteModalComponent, {
-      label: this.label,
-      fullAddressDetails: this.fullAddressDetails
-    });
-    addressAutocompleteModal.onDidDismiss((newAddress: Address) => {
-      if (newAddress && newAddress.formattedAddress) {
-        this.addressValue = newAddress;
-      }
-    });
-    addressAutocompleteModal.present();
+    console.log('openModal');
+    if (!this.isModalPresented) {
+      const addressAutocompleteModal = this.modalCtrl.create(AddressAutocompleteModalComponent, {
+        label: this.label,
+        fullAddressDetails: this.fullAddressDetails
+      });
+      addressAutocompleteModal.onDidDismiss((newAddress: Address) => {
+        if (newAddress && newAddress.formattedAddress) {
+          this.addressValue = newAddress;
+        }
+        this.isModalPresented = false;
+      });
+      addressAutocompleteModal.present();
+      this.isModalPresented = true;
+    }
   }
 
   /**
