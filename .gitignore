@@ -60,3 +60,10 @@ typings/
 dist/
 .ng_build/
 /src/@my
+
+# ionic
+hooks/
+platforms/
+plugins/
+plugins/android.json
+plugins/ios.json
