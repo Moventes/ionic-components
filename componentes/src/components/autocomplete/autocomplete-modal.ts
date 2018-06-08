@@ -1,5 +1,5 @@
-import { Component, forwardRef, NgZone, ViewChild } from '@angular/core';
-import { NG_VALUE_ACCESSOR, ControlValueAccessor } from '@angular/forms';
+import { Component, forwardRef, ViewChild } from '@angular/core';
+import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 import { NavParams, Searchbar, ViewController } from 'ionic-angular';
 
 /**
@@ -104,7 +104,7 @@ export class AutocompleteModalComponent<T> implements ControlValueAccessor {
     this.customEnabled = false;
     setTimeout(() => {
       this.searchBar.setFocus();
-    }, 150);
+    }, 500);
   }
 
   /**
