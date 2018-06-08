@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { ModuleWithProviders } from '@angular/compiler/src/core';
 import { IonicModule } from 'ionic-angular';
 import { TranslateModule } from '@ngx-translate/core';
 
@@ -13,21 +14,20 @@ import { CounterInputComponent } from './components/counter-input/counter-input'
 import { ElementOfArrayComponent } from './components/element-of-array/element-of-array';
 import { ErrorsDisplayComponent } from './components/errors-display/errors-display';
 import { PhoneInputComponent } from './components/phone-input/phone-input';
+import { PhoneInputWithCodeComponent } from './components/phone-input-with-code/phone-input-with-code';
 import { RadioListComponent } from './components/radio-list/radio-list';
 import { YesNoListComponent } from './components/yes-no-list/yes-no-list';
 
 import { AnswersProvider } from './providers/answers';
 import { LoadingProvider } from './providers/loading';
 import { PromptProvider } from './providers/prompt';
-import { ModuleWithProviders } from '@angular/compiler/src/core';
+
 import { ComponentesConfigModel } from './models/componentes-config.model';
 
 export * from './providers/answers';
 export * from './providers/loading';
 export * from './providers/prompt';
 export * from './components/address-autocomplete/address-autocomplete-modal';
-
-
 
 @NgModule({
   declarations: [
@@ -40,6 +40,7 @@ export * from './components/address-autocomplete/address-autocomplete-modal';
     ElementOfArrayComponent,
     ErrorsDisplayComponent,
     PhoneInputComponent,
+    PhoneInputWithCodeComponent,
     RadioListComponent,
     YesNoListComponent,
   ],
@@ -65,6 +66,7 @@ export * from './components/address-autocomplete/address-autocomplete-modal';
     ElementOfArrayComponent,
     ErrorsDisplayComponent,
     PhoneInputComponent,
+    PhoneInputWithCodeComponent,
     RadioListComponent,
     YesNoListComponent,
   ]

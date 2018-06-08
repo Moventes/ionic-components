@@ -1,0 +1,8 @@
+<ion-list>
+  <mv-autocomplete [label]="countryLabel" [list]="countryList" [allowCustom]="false" [display]="displayFunction" [filter]="filterFunction"
+    [(ngModel)]="selectedCountry"></mv-autocomplete>
+  <ion-item>
+    <ion-label text-wrap>{{ phoneLabel }}</ion-label>
+    <mv-phone-input item-content [(ngModel)]="internationalPhoneValue" [countryCode]="selectedCountry?.id"> </mv-phone-input>
+  </ion-item>
+</ion-list>

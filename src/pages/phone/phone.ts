@@ -1,6 +1,9 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+
+import { NavController, NavParams } from 'ionic-angular';
+
+import { Country } from '../../../componentes/src/models/country.model';
 
 /**
  * Generated class for the PhonePage page.
@@ -14,10 +17,23 @@ import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms'
   templateUrl: 'phone.html',
 })
 export class PhonePage {
-
   private form: FormGroup;
   private phone = '0613256545';
-
+  private intlPhone: string;
+  private countryList: Country[] = [
+    {
+      id: 'FR',
+      label: 'France'
+    },
+    {
+      id: 'US',
+      label: 'U.S.A.'
+    },
+    {
+      id: 'GB',
+      label: 'United Kingdom'
+    }
+  ];
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public fb: FormBuilder) {
     this.form = this.fb.group({

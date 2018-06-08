@@ -36,7 +36,19 @@ const PhoneNumberFormat = libPhoneNumber.PhoneNumberFormat;
 })
 export class PhoneInputComponent implements ControlValueAccessor {
   @Input()
-  label: string;
+  public label: string;
+
+  private _countryCode = 'FR';
+
+  @Input()
+  public set countryCode(value: string) {
+    this._countryCode = value;
+    this.displayedPhoneValue = this.displayedPhoneValue;
+  }
+
+  public get countryCode(): string {
+    return this._countryCode;
+  }
 
   /**
    * The phone value stored in the model
@@ -74,7 +86,7 @@ export class PhoneInputComponent implements ControlValueAccessor {
 
   public set displayedPhoneValue(val) {
     try {
-      this.number = this.phoneUtil.parse(val, 'FR');
+      this.number = this.phoneUtil.parse(val, this.countryCode);
       this._displayedPhoneValue = this.phoneUtil.format(this.number, PhoneNumberFormat.NATIONAL);
       this.phoneValue = this.phoneUtil.format(this.number, PhoneNumberFormat.E164).replace('+', '00');
       // numbers in +xxyyyy do not work on some Android versions
