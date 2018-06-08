@@ -1,12 +1,12 @@
 
-import { Component, forwardRef, OnInit, Input, NgZone } from '@angular/core';
-import { NG_VALUE_ACCESSOR, ControlValueAccessor } from '@angular/forms';
+import { Component, forwardRef, Input } from '@angular/core';
+import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 import { ModalController } from 'ionic-angular';
-
 import { AutocompleteModalComponent } from './autocomplete-modal';
 
+
 /**
- * Component providing a searchbar input which autocomplete returned by Google Maps API
+ * Component providing a searchbar input with autocomplete
  *
  * @example
  * //TODO
@@ -27,27 +27,29 @@ export class AutocompleteComponent<T> implements ControlValueAccessor {
    * The component needs a label option to fill the placeholder
    */
   @Input()
-  label: string;
+  public label: string;
 
   /**
    * Boolean that indicates if the component will accept custom value or not.
    */
   @Input()
-  allowCustom: boolean;
+  public allowCustom: boolean;
 
   @Input()
-  display: Function;
+  public display: Function;
 
   @Input()
-  filter: Function;
+  public filter: Function;
 
   @Input()
-  factory: Function;
+  public factory: Function;
 
   @Input()
-  list: T[];
+  public list: T[];
 
-  value: string;
+  public value: string;
+
+  private isModalPresented = false;
 
   /**
    * Address value
@@ -71,23 +73,27 @@ export class AutocompleteComponent<T> implements ControlValueAccessor {
    * Open a modal with searchbar and results list.
    */
   public openModal() {
-    const autocompleteModal = this.modalCtrl.create(AutocompleteModalComponent, {
-      label: this.label,
-      list: this.list,
-      allowCustom: this.allowCustom,
-      display: this.display,
-      filter: this.filter,
-      factory: this.factory
-    });
-    autocompleteModal.onDidDismiss((newItem: T) => {
-      if (newItem) {
-        this.itemValue = newItem;
-        this.value = this.removeTags(this.display(this.itemValue));
-      } else {
-        // do nothing
-      }
-    });
-    autocompleteModal.present();
+    if (!this.isModalPresented) {
+      const autocompleteModal = this.modalCtrl.create(AutocompleteModalComponent, {
+        label: this.label,
+        list: this.list,
+        allowCustom: this.allowCustom,
+        display: this.display,
+        filter: this.filter,
+        factory: this.factory
+      });
+      autocompleteModal.onDidDismiss((newItem: T) => {
+        if (newItem) {
+          this.itemValue = newItem;
+          this.value = this.removeTags(this.display(this.itemValue));
+        } else {
+          // do nothing
+        }
+        this.isModalPresented = false;
+      });
+      autocompleteModal.present();
+      this.isModalPresented = true;
+    }
   }
 
   /**

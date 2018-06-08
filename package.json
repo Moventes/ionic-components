@@ -82,5 +82,10 @@
     "tslib": "^1.7.1",
     "tslint": "~5.9.0",
     "typescript": "~2.7.2"
+  },
+  "cordova": {
+    "platforms": [
+      "android"
+    ]
   }
 }
