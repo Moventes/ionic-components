@@ -1,17 +1,15 @@
 {
   "name": "mv-ionic-components",
-  "version": "1.1.4",
-  "repository": "https://gitlab.com/RnD-moventes/componentes/ionic-components/issues",
+  "version": "1.1.6",
+  "repository": "https://github.com/Moventes/ionic-components",
   "author": {
     "name": "MOVENTES",
     "email": "dev@moventes.com"
   },
-  "keywords": [
-    "angular"
-  ],
+  "keywords": ["angular", "ionic"],
   "license": "MIT",
   "bugs": {
-    "url": "https://gitlab.com/RnD-moventes/componentes/ionic-components/issues"
+    "url": "https://github.com/Moventes/ionic-components/issues"
   },
   "homepage": "https://moventes.com/",
   "peerDependencies": {
@@ -24,7 +22,7 @@
     "@angular/platform-browser": "6.0.0-rc.5",
     "@angular/platform-browser-dynamic": "6.0.0-rc.5",
     "@ngx-translate/core": "9.0.2",
-    "mv-common-components": "^1.0.1"
+    "mv-common-components": ">=1.1.2"
   },
   "ngPackage": {
     "$schema": "./node_modules/ng-packagr/ng-package.schema.json",

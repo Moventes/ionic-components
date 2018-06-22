@@ -16,12 +16,11 @@
     "ionic:build": "ionic-app-scripts build",
     "ionic:serve": "ionic-app-scripts serve",
     "link": "yarn link mv-common-components && yarn install && npm run build:lib && cd dist/ionic-components && yarn link",
-    "link:npm": "npm link mv-common-components && npm install && ng-packagr -p ng-package.json && cd dist && npm link",
-    "publish": "yarn install && ng-packagr -p ng-package.json && echo \"Checking if you are logged in NPM registry (user: moventes, email: dev@moventes.com, pwd: *******)...\" && npm whoami && npm publish dist",
-    "publish:npm": "npm install && ng-packagr -p ng-package.json && echo \"Checking if you are logged in NPM registry (user: moventes, email: dev@moventes.com, pwd: *******)...\" && npm whoami && npm publish dist",
+    "link:npm": "npm link mv-common-components && npm install && npm run build:lib && cd dist && npm link",
+    "publish": "yarn install && npm run build:lib && echo \"Checking if you are logged in NPM registry (user: moventes, email: dev@moventes.com, pwd: *******)...\" && npm whoami && npm publish dist/ionic-components",
+    "publish:npm": "npm install && npm run build:lib && echo \"Checking if you are logged in NPM registry (user: moventes, email: dev@moventes.com, pwd: *******)...\" && npm whoami && npm publish dist/ionic-components",
     "compodoc": "./node_modules/.bin/compodoc -p tsconfig.json",
-    "compodoc-serve": "./node_modules/.bin/compodoc -s",
-    "ng-packagr": "ng-packagr -p ng-package.json"
+    "compodoc-serve": "./node_modules/.bin/compodoc -s"
   },
   "dependencies": {
     "@angular/common": "6.0.0-rc.6",
@@ -50,7 +49,7 @@
     "ionic-plugin-keyboard": "^2.2.1",
     "ionicons": "3.0.0",
     "moment": "^2.22.2",
-    "mv-common-components": "^1.1.2",
+    "mv-common-components": ">=1.1.2",
     "polyfill": "^0.1.0",
     "rxjs": "^6.0.0",
     "rxjs-compat": "^6.2.0",

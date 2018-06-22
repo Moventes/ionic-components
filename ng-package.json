@@ -1,5 +1,40 @@
 {
   "$schema": "./node_modules/ng-packagr/ng-package.schema.json",
+  "whitelistedNonPeerDependencies": [
+    "@angular/core",
+    "@angular/common",
+    "@angular/forms",
+    "@angular/compiler",
+    "@angular/http",
+    "@angular/platform-browser",
+    "@angular/platform-browser-dynamic",
+    "@angular/router",
+    "@ionic-native/core",
+    "@ionic-native/splash-screen",
+    "@ionic-native/status-bar",
+    "@ionic/storage",
+    "@ngx-translate/core",
+    "@ngx-translate/http-loader",
+    "google-libphonenumber",
+    "ionic-angular",
+    "cordova-android",
+    "cordova-plugin-device",
+    "cordova-plugin-ionic-webview",
+    "cordova-plugin-splashscreen",
+    "cordova-plugin-whitelist",
+    "core-js",
+    "ionic-plugin-keyboard",
+    "ionicons",
+    "moment",
+    "polyfill",
+    "rxjs",
+    "rxjs-compat",
+    "sw-toolbox",
+    "zone.js",
+    "mv-common-components"
+
+
+  ],
   "lib": {
     "entryFile": "componentes/src/public_api.ts",
     "externals": {
