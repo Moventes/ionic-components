@@ -1,7 +1,7 @@
-import { ComponentesConfigModel } from './../models/componentes-config.model';
 import { Injectable, Inject } from '@angular/core';
-import { ToastController } from 'ionic-angular';
+import { ToastController, Toast } from 'ionic-angular';
 import { TranslateService } from '@ngx-translate/core';
+import { ComponentesConfigModel } from './../models/componentes-config.model';
 
 /**
  * Class used to display informations to the user
@@ -11,7 +11,9 @@ export class PromptProvider {
 
   @Inject('COMPONENTES_CONFIG') config: ComponentesConfigModel;
 
-  private TOAST_DURATION = 5000;
+  private TOAST_DURATION = 3000;
+
+  private toasts: Toast[] = [];
 
   constructor(
     private toastCtrl: ToastController,
@@ -38,15 +40,6 @@ export class PromptProvider {
     console[level](messageObj);
     let message = messageObj;
     if (typeof message !== 'string') {
-      // if (message.display) {
-      //   message = message.display
-      // } else if (message.message) {
-      //   message = message.message;
-      // } else if (message.code) {
-      //   message = message.code;
-      // } else {
-      //   message = JSON.stringify(message);
-      // }
       if (this.config && this.config.promptParseFunction) {
         message = this.config.promptParseFunction(message);
       } else {
@@ -67,24 +60,36 @@ export class PromptProvider {
     }
     this.translate.get(message).first().toPromise()
       .then(translation => {
-        const toast = this.toastCtrl.create({
-          message: translation,
-          duration: this.TOAST_DURATION || 3000,
-          position: 'bottom',
-          cssClass: 'toast-' + level
-        });
-        toast.present();
-      }).catch(error => {
-
-        const toast = this.toastCtrl.create({
-          message: message,
-          duration: this.TOAST_DURATION || 3000,
-          position: 'bottom',
-          cssClass: 'toast-' + level
-        });
-
-        toast.present();
+        this.pushToast(translation, level);
+      }).catch(() => {
+        this.pushToast(message, level);
       });
+  }
+
+  private pushToast(message: string, level: string) {
+    const toast = this.toastCtrl.create({
+      message,
+      duration: this.TOAST_DURATION,
+      position: 'bottom',
+      cssClass: 'toast-' + level
+    });
+
+    toast.onDidDismiss(() => {
+      this.toasts.shift();
+      if (this.toasts.length > 0) {
+        this.show();
+      }
+    });
+
+    this.toasts.push(toast);
+
+    if (this.toasts.length === 1) {
+      this.show();
+    }
+  }
+
+  show() {
+    this.toasts[0].present();
   }
 
 }
