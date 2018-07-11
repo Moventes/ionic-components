@@ -22,9 +22,6 @@ import { PromptProvider } from './providers/prompt';
 
 
 
-export * from './providers/answers';
-export * from './providers/loading';
-export * from './providers/prompt';
 
 @NgModule({
   declarations: [

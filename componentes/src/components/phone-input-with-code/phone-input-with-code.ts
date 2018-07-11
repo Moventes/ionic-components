@@ -1,10 +1,10 @@
-import { Component, forwardRef, Input, ChangeDetectorRef } from '@angular/core';
-import { NG_VALUE_ACCESSOR, ControlValueAccessor } from '@angular/forms';
-
+import { Component, forwardRef, Input } from '@angular/core';
+import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 // this kind of import is necessary for packaging to work
 import * as libPhoneNumber from 'google-libphonenumber';
-
 import { Country } from '../../models/country.model';
+
+
 
 /**
  * Provides utils for phone numbers
