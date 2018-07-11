@@ -1,26 +1,26 @@
 
-import { BrowserModule } from '@angular/platform-browser';
-import { ErrorHandler, NgModule } from '@angular/core';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
-import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
+import { ErrorHandler, NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
-import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { ComponentsCommonModule } from 'mv-common-components';
-
-import { MyApp } from './app.component';
-import { HomePage } from '../pages/home/home';
+import { ComponentsIonicModule } from '../../componentes/src/componentes.module';
+import { AutocompleteModalComponent } from '../../componentes/src/components/autocomplete/autocomplete-modal';
 import { AddressPage } from '../pages/address/address';
+import { AutocompletePage } from '../pages/autocomplete/autocomplete';
 import { CounterPage } from '../pages/counter/counter';
-import { PhonePage } from '../pages/phone/phone';
+import { HomePage } from '../pages/home/home';
 import { IteratorPipePage } from '../pages/iterator-pipe/iterator-pipe';
+import { PhonePage } from '../pages/phone/phone';
 import { RadioListPage } from '../pages/radio-list/radio-list';
 import { YesNoListPage } from '../pages/yes-no-list/yes-no-list';
+import { MyApp } from './app.component';
 
-import { ComponentsIonicModule, AddressAutocompleteModalComponent } from '../../componentes/src/componentes.module';
-import { AutocompletePage } from '../pages/autocomplete/autocomplete';
-import { AutocompleteModalComponent } from '../../componentes/src/components/autocomplete/autocomplete-modal';
+
 
 
 export function promptParse(message) {
@@ -86,7 +86,6 @@ export function HttpLoaderFactory(http: HttpClient) {
     RadioListPage,
     YesNoListPage,
     IteratorPipePage,
-    AddressAutocompleteModalComponent,
     AutocompleteModalComponent
   ],
   providers: [

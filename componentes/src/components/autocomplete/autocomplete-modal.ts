@@ -177,7 +177,7 @@ export class AutocompleteModalComponent<T> implements ControlValueAccessor {
     if (this.displayedItemValue) {
       this.setList(this.list.filter((item: T) => this.filter(item, this.displayedItemValue)));
     } else {
-      this.setList();
+      this.setList(this.list);
     }
     if (!this.customEnabled) {
       this.customEnabled = true;
