@@ -2,6 +2,7 @@ import { ModuleWithProviders } from '@angular/compiler/src/core';
 import { NgModule } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 import { IonicModule } from 'ionic-angular';
+import { ComponentsCommonModule } from 'mv-common-components';
 import { AddressAutocompleteComponent } from './components/address-autocomplete/address-autocomplete';
 import { AddressAutocompleteModalComponent } from './components/address-autocomplete/address-autocomplete-modal';
 import { AddressInputComponent } from './components/address-input/address-input';
@@ -42,6 +43,7 @@ export * from './providers/prompt';
   ],
   imports: [
     IonicModule,
+    ComponentsCommonModule,
     // IonicModule.forRoot(AddressInputComponent),
     // IonicModule.forRoot(CounterInputComponent),
     // IonicModule.forRoot(ElementOfArrayComponent),

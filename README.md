@@ -40,6 +40,7 @@ $ ionic serve
 1. add your code in `[PROJECT_ROOT]/componentes/src/components/`
 2. declare your new component in `[PROJECT_ROOT]/componentes/src/componentes.module.ts`
 3. declare your new component in `[PROJECT_ROOT]/componentes/src/lib.module.ts`
-4. add an example of use in `[PROJECT_ROOT]/src/pages`
-5. increase the version number of the library in `[PROJECT_ROOT]/componentes/package.json`
-6. publish on NPM repository with the command `npm run publish:npm`
+4. add it in `[PROJECT_ROOT]/componentes/src/public_api.ts`
+5. add an example of use in `[PROJECT_ROOT]/src/pages`
+6. increase the version number of the library in `[PROJECT_ROOT]/componentes/package.json`
+7. publish on NPM repository with the command `npm run publish:npm`
