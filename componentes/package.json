@@ -1,6 +1,6 @@
 {
   "name": "mv-ionic-components",
-  "version": "1.1.13",
+  "version": "1.1.14",
   "repository": "https://github.com/Moventes/ionic-components",
   "author": {
     "name": "MOVENTES",
@@ -22,7 +22,8 @@
     "@angular/platform-browser": "6.0.0-rc.5",
     "@angular/platform-browser-dynamic": "6.0.0-rc.5",
     "@ngx-translate/core": "9.0.2",
-    "mv-common-components": ">=1.1.2"
+    "mv-common-components": ">=1.1.2",
+    "lodash": "^4.17.10"
   },
   "ngPackage": {
     "$schema": "./node_modules/ng-packagr/ng-package.schema.json",

@@ -9,6 +9,7 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { ComponentsCommonModule } from 'mv-common-components';
 import { ComponentsIonicModule } from '../../componentes/src/componentes.module';
+import { AddressAutocompleteModalComponent } from '../../componentes/src/components/address-autocomplete/address-autocomplete-modal';
 import { AutocompleteModalComponent } from '../../componentes/src/components/autocomplete/autocomplete-modal';
 import { AddressPage } from '../pages/address/address';
 import { AutocompletePage } from '../pages/autocomplete/autocomplete';
@@ -86,7 +87,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     RadioListPage,
     YesNoListPage,
     IteratorPipePage,
-    AutocompleteModalComponent
+    AutocompleteModalComponent,
+    AddressAutocompleteModalComponent
   ],
   providers: [
     StatusBar,

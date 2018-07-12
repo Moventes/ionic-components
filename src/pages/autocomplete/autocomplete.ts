@@ -35,7 +35,32 @@ export class AutocompletePage {
   itemCustom: Item;
   itemNoCustom: Item;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) { }
+  private iterator: number;
+  constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.iterator = 0;
+    setInterval(() => {
+      console.log('changing the list...');
+      this.iterator++;
+      this.list = [
+        {
+          id: 1,
+          fname: 'Thierry (toujours le même ;-)',
+          lname: 'CHAMPOT'
+        },
+        {
+          id: 2,
+          fname: 'Gwenaël' + this.iterator,
+          lname: 'HENOT'
+        },
+        {
+          id: 3,
+          fname: 'Louis no ' + this.iterator,
+          lname: 'AMSTUTZ'
+        }
+      ];
+    }, 8000);
+
+  }
 
   displayFunction(item: Item) {
     const html = `<h1>${item.id || 'N.A.'}</h1> <h2>${item.fname || ''} ${item.lname || ''}</h2>`;
