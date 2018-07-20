@@ -111,7 +111,7 @@ export class AutocompleteModalComponent<T> implements ControlValueAccessor {
    * Empties the propositions list.
    * Called before its filling or when there are not results from Google services
    */
-  private setList(results = null) {
+  private setFilteredList(results = null) {
     this.results = results || [];
   }
 
@@ -120,7 +120,7 @@ export class AutocompleteModalComponent<T> implements ControlValueAccessor {
    */
   public onBlur() {
     // we need a timeout to prevent list from being emptied before the click event is emitted
-    setTimeout(() => this.setList(), 300);
+    setTimeout(() => this.setFilteredList(), 300);
   }
 
   /**
@@ -163,21 +163,25 @@ export class AutocompleteModalComponent<T> implements ControlValueAccessor {
   * this method updates the formatted address of the address model.
   * This also calls the method responsible of filling the propositions list with AutocompleteService.
   */
-  public inputOnSearchbar(disableCustom: boolean) {
+  public inputOnSearchbar(onInput: boolean) {
     if (this.displayedItemValue && this.allowCustom) {
       this.itemValue = this.factory(this.displayedItemValue);
     } else {
       this.itemValue = null;
     }
-    if (this.customEnabled && disableCustom) {
+    if (this.customEnabled && onInput) {
       this.customEnabled = false;
     } else {
       // Nothing to do...
     }
-    if (this.displayedItemValue) {
-      this.setList(this.list.filter((item: T) => this.filter(item, this.displayedItemValue)));
+    if (!this.list) {
+      this.setFilteredList(this.list);
     } else {
-      this.setList(this.list);
+      if (this.displayedItemValue) {
+        this.setFilteredList(this.list.filter((item: T) => this.filter(item, this.displayedItemValue)));
+      } else {
+        this.setFilteredList(this.list);
+      }
     }
     if (!this.customEnabled) {
       this.customEnabled = true;
@@ -204,7 +208,7 @@ export class AutocompleteModalComponent<T> implements ControlValueAccessor {
   public selectSearchResult(item) {
     this.itemValue = item;
     this.viewCtrl.dismiss(this.itemValue);
-    this.setList();
+    this.setFilteredList();
   }
 
   closeModal() {
