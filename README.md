@@ -26,13 +26,12 @@ export class AppModule { }
 
 3. import it in the page module if needed
 
-
 ## Run the sample project
 
 ```bash
-$ git clone git@github.com:Moventes/ionic-components.git
-$ npm i
-$ ionic serve
+git clone git@github.com:Moventes/ionic-components.git
+npm i
+ionic serve
 ```
 
 ## Add a new component to this library

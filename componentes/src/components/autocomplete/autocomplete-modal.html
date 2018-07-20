@@ -9,19 +9,18 @@
   </ion-toolbar>
 </ion-header>
 <ion-content>
-  <ion-item>
-    <ion-searchbar #search type="text" id="search" [(ngModel)]="displayedItemValue" (ionInput)="inputOnSearchbar(true)" (ionFocus)="inputOnSearchbar(false)"
-      (ionBlur)="onBlur()" [placeholder]="label"></ion-searchbar>
-  </ion-item>
-  <ion-item *ngIf="results.length > 0 || (allowCustom && displayedItemValue)">
-    <ion-list>
-      <ion-item text-wrap *ngFor="let item of results" tappable (click)="selectSearchResult(item)" [innerHTML]="display(item) | mvSafeHtml">
-      </ion-item>
-      <ion-item (click)="selectCustomItem()" *ngIf="allowCustom && customEnabled">
-        <p style="color: #606060; font-style: oblique">{{ displayedItemValue }}</p>
-      </ion-item>
-    </ion-list>
-  </ion-item>
+  <ion-searchbar #search type="text" id="search" [(ngModel)]="displayedItemValue" (ionInput)="inputOnSearchbar(true)" (ionFocus)="inputOnSearchbar(false)"
+    (ionBlur)="onBlur()" [placeholder]="label"></ion-searchbar>
+  <ion-list [virtualScroll]="results">
+    <ion-item text-wrap *virtualItem="let item" tappable (click)="selectSearchResult(item)" [innerHTML]="display(item) | mvSafeHtml">
+    </ion-item>
+    <ion-item (click)="selectCustomItem()" *ngIf="allowCustom && customEnabled && displayedItemValue">
+      <p style="color: #606060; font-style: oblique">{{ displayedItemValue }}</p>
+    </ion-item>
+  </ion-list>
+  <div *ngIf="(!list || list.length === 0) && !allowCustom" class="loading" text-center>
+    <ion-spinner></ion-spinner>
+  </div>
   <!-- some html element is needed by maps API to "display" attribution when no maps is generated -->
   <p id="attribution"></p>
 </ion-content>
