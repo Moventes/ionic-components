@@ -93,7 +93,8 @@ export function HttpLoaderFactory(http: HttpClient) {
   providers: [
     StatusBar,
     SplashScreen,
-    { provide: ErrorHandler, useClass: IonicErrorHandler }
+    { provide: ErrorHandler, useClass: IonicErrorHandler },
+    { provide: 'LOADING_GIF_PATH', useValue: 'assets/imgs/logo.png' },
   ]
 })
 export class AppModule { }

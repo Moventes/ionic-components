@@ -1,3 +1,4 @@
+import { LoadingProvider } from './../../../componentes/src/providers/loading';
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
@@ -15,7 +16,7 @@ import { AutocompletePage } from '../autocomplete/autocomplete';
 })
 export class HomePage {
 
-  constructor(public navCtrl: NavController) {
+  constructor(public navCtrl: NavController, public loadingProvider: LoadingProvider) {
 
   }
 
@@ -45,6 +46,20 @@ export class HomePage {
 
   goToAutocompletePage(): void {
     this.navCtrl.push(AutocompletePage);
+  }
+
+  public showLoad() {
+    this.loadingProvider.waitForPromise(this.wait(3000), false, 'wait 3s', true);
+    this.loadingProvider.waitForPromise(this.wait(6000), false, 'wait 6s', false);
+  }
+
+  wait(time: number = 0): Promise<void> {
+    return new Promise((res) => {
+      setTimeout(() => {
+        console.log(time + ' wait end');
+        res();
+      }, time);
+    });
   }
 
 }

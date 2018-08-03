@@ -18,6 +18,9 @@ export class LoadingProvider {
 
   private knownMessages = {};
 
+  private promiseQueue = Promise.resolve();
+  // private promiseQueueLength = 0;
+
   constructor(
     @Inject('LOADING_GIF_PATH') private gifPath: string,
     private loadingCtrl: LoadingController,
@@ -65,7 +68,7 @@ export class LoadingProvider {
       this.getLoadingMessage(loadingMessage)
         .then(message => {
           this.initLoading(message);
-          return promise;
+          return this.promiseQueue.then(() => promise);
         }).then((...args) => {
           if (!keepLoadingIfResolved && this.loading) {
             this.loading.dismiss();
