@@ -28,13 +28,7 @@
     ],
     "member-access": false,
     "member-ordering": [
-      true,
-      {
-        "order": [
-          "static-before-instance",
-          "variables-before-functions"
-        ]
-      }
+      false
     ],
     "no-arg": true,
     "no-bitwise": true,
@@ -128,9 +122,6 @@
       "Component",
       "Page"
     ],
-    "directive-class-suffix": true,
-    "no-access-missing-member": true,
-    "templates-use-public": true,
-    "invoke-injectable": true
+    "directive-class-suffix": true
   }
 }

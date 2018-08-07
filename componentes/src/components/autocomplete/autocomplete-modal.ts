@@ -116,14 +116,6 @@ export class AutocompleteModalComponent<T> implements ControlValueAccessor {
   }
 
   /**
-   * When the input loses the focus, this method is called to hide the propositions list.
-   */
-  public onBlur() {
-    // we need a timeout to prevent list from being emptied before the click event is emitted
-    setTimeout(() => this.setFilteredList(), 300);
-  }
-
-  /**
    * This method is part of ControlValueAccessor interface.
    * Its role is to set value from the model to the DOM
    *

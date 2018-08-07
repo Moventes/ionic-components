@@ -10,7 +10,7 @@
 </ion-header>
 <ion-content>
   <ion-searchbar #search type="text" id="search" [(ngModel)]="displayedItemValue" (ionInput)="inputOnSearchbar(true)" (ionFocus)="inputOnSearchbar(false)"
-    (ionBlur)="onBlur()" [placeholder]="label"></ion-searchbar>
+    [placeholder]="label"></ion-searchbar>
   <ion-list [virtualScroll]="results">
     <ion-item text-wrap *virtualItem="let item" tappable (click)="selectSearchResult(item)" [innerHTML]="display(item) | mvSafeHtml">
     </ion-item>
