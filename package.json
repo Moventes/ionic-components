@@ -1,6 +1,6 @@
 {
   "name": "ng-packaged",
-  "version": "1.1.19",
+  "version": "1.1.20",
   "private": true,
   "license": "MIT",
   "scripts": {
@@ -17,7 +17,7 @@
     "ionic:serve": "ionic-app-scripts serve",
     "link": "yarn link mv-common-components && yarn install && npm run build:lib && cd dist/ionic-components && yarn link",
     "link:npm": "npm link mv-common-components && npm install && npm run build:lib && cd dist && npm link",
-    "publish": "yarn install && npm run build:lib && echo \"Checking if you are logged in NPM registry (user: moventes, email: dev@moventes.com, pwd: *******)...\" && npm whoami && npm publish dist/ionic-components",
+    "publish:yarn": "yarn install && npm run build:lib && echo \"Checking if you are logged in NPM registry (user: moventes, email: dev@moventes.com, pwd: *******)...\" && npm whoami && npm publish dist/ionic-components",
     "publish:npm": "npm install && npm run build:lib && echo \"Checking if you are logged in NPM registry (user: moventes, email: dev@moventes.com, pwd: *******)...\" && npm whoami && npm publish dist/ionic-components",
     "compodoc": "./node_modules/.bin/compodoc -p tsconfig.json",
     "compodoc-serve": "./node_modules/.bin/compodoc -s"

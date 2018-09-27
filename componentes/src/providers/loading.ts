@@ -1,20 +1,31 @@
-import { Injectable, Inject } from '@angular/core';
-import { LoadingController, Loading } from 'ionic-angular';
+import { Inject, Injectable } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
+import { Loading, LoadingController } from 'ionic-angular';
 import 'rxjs/add/operator/first';
-
+import { ComponentesConfigModel } from './../models/componentes-config.model';
 import { PromptProvider } from './prompt';
 
-const LOADING_TEXT = 'Loading...';
 
+
+const LOADING_TEXT = 'Loading...';
 /**
  * Provides the user's context to the application
  * This provider should be used to store and find the current course, mission, questions being answered
+ *
+ *  * TO HIDE BACKGROUND AROUND IMG:
+ * ion-loading.wait-for-promise-modal {
+  .loading-wrapper {
+    background: transparent;
+    box-shadow: none;
+  }
+}
  */
 @Injectable()
 export class LoadingProvider {
   // private defaultLoadingText: string = null;
   private loading: Loading = null;
+  @Inject('COMPONENTES_CONFIG') config: ComponentesConfigModel;
+  private delayBeforeDisplayingImg = 1200;
 
   private knownMessages = {};
 
@@ -27,18 +38,25 @@ export class LoadingProvider {
     private translate: TranslateService,
     private prompt: PromptProvider
   ) {
+    if (this.config && this.config.imgDisplayDelayForLoading) {
+      this.delayBeforeDisplayingImg = this.config.imgDisplayDelayForLoading;
+    }
   }
 
   initLoading(loadingMessage): Loading {
     if (!this.loading) {
       this.loading = this.loadingCtrl.create({
         spinner: 'hide',
-        content:
-          `<img style="width:100%" src="${this.gifPath}" alt="Loading"></img>
-          <p style="text-align: center;">${loadingMessage}</p>`,
-        cssClass: 'vertical-flex-centered'
+        content: '',
+        cssClass: 'vertical-flex-centered wait-for-promise-modal'
       });
       this.loading.present();
+      setTimeout(() => {
+        if (this.loading) {
+          this.loading.setContent(`<img style="width:100%" src="${this.gifPath}" alt="Loading"></img>
+          <p style="text-align: center;">${loadingMessage}</p>`);
+        }
+      }, this.delayBeforeDisplayingImg);
     }
     return this.loading;
   }
@@ -64,29 +82,24 @@ export class LoadingProvider {
   }
 
   waitForPromise<T>(promise: Promise<T>, promptError = false, loadingMessage?: string, keepLoadingIfResolved = false): Promise<T> {
-    return new Promise<T>((resolve, reject) => {
-      this.getLoadingMessage(loadingMessage)
-        .then(message => {
-          this.initLoading(message);
-          return this.promiseQueue.then(() => promise);
-        }).then((...args) => {
-          if (!keepLoadingIfResolved && this.loading) {
-            this.loading.dismiss();
-            this.loading = null;
-          }
-          resolve(...args);
-        }).catch((...err) => {
-          if (this.loading) {
-            this.loading.dismiss();
-            this.loading = null;
-          }
-          if (promptError) {
-            this.prompt.error(err[0]);
-            resolve();
-          } else {
-            reject(...err);
-          }
-        });
-    });
+    this.getLoadingMessage(loadingMessage)
+      .then(message => {
+        this.initLoading(message);
+        return this.promiseQueue.then(() => promise);
+      }).then((...args) => {
+        if (!keepLoadingIfResolved && this.loading) {
+          this.loading.dismiss();
+          this.loading = null;
+        }
+      }).catch((...err) => {
+        if (this.loading) {
+          this.loading.dismiss();
+          this.loading = null;
+        }
+        if (promptError) {
+          this.prompt.error(err[0]);
+        }
+      });
+    return promise;
   }
 }
